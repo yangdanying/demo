@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name ="viewport" content ="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<title>addressList</title>
+	<link rel="stylesheet" href="../resources/css/addressList.css">
+	<script src="../resources/js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<header>
+		<div>
+			<a href="javascript:history.go(-1)" class="back"><img src="../resources/img/AR/back.png" alt=""></a>
+			<p>校园通讯录</p>
+			<p>Campus Address Book</p>
+		</div>
+	</header>
+	<div class="blanking"></div>
+	<div class="content">
+		<div class="grey">
+			<div class="phone">
+				<img src="../resources/img/addressList/phone.png" alt="">
+			</div>
+			<span class="name">校务部</span>
+			<span class="number">0431-8xxxxxxx</span>
+		</div>
+		<div class="white">
+			<div class="phone">
+				<img src="../resources/img/addressList/phone.png" alt="">
+			</div>
+			<span class="name">辅导员</span>
+			<span class="number">157xxxxxxxx</span>
+		</div>
+		<div class="grey">
+			<div class="phone">
+				<img src="../resources/img/addressList/phone.png" alt="">
+			</div>
+			<span class="name">招生办公室</span>
+			<span class="number">0431-8xxxxxxx</span>
+			<!-- <span class="name" style="height:5rem">招生办公室</span>
+			<span class="number" style="height:5rem;line-height:2.5rem">
+				<p>0431-87021904</p>
+				<p>0431-87011156</p>
+			</span> -->
+		</div>
+		<div class="white">
+			<div class="phone">
+				<img src="../resources/img/addressList/phone.png" alt="">
+			</div>
+			<span class="name">就业办公室</span>
+			<span class="number">0431-8xxxxxxx</span>
+		</div>
+		<div class="grey">
+			<div class="phone">
+				<img src="../resources/img/addressList/phone.png" alt="">
+			</div>
+			<span class="name">餐饮管理办公室</span>
+			<span class="number">0431-8xxxxxxx</span>
+		</div>
+		<div class="white">
+			<div class="phone">
+				<img src="../resources/img/addressList/phone.png" alt="">
+			</div>
+			<span class="name">保卫办公室</span>
+			<span class="number">0431-8xxxxxxx</span>
+		</div>
+		<div class="grey">
+			<div class="phone">
+				<img src="../resources/img/addressList/phone.png" alt="">
+			</div>
+			<span class="name">报刊室</span>
+			<span class="number">0431-8xxxxxxx</span>
+		</div>
+		<div class="white">
+			<div class="phone">
+				<img src="../resources/img/addressList/phone.png" alt="">
+			</div>
+			<span class="name">电子阅览室</span>
+			<span class="number">0431-8xxxxxxx</span>
+		</div>
+		<div class="grey">
+			<div class="phone">
+				<img src="../resources/img/addressList/phone.png" alt="">
+			</div>
+			<span class="name">动漫游戏博物馆</span>
+			<span class="number">0431-8xxxxxxx</span>
+		</div>
+	</div>
+	<div class="mask"></div>
+	<div class="call">
+		<div class="closeBtn">
+			<img src="../resources/img/addressList/close.png" alt="">
+		</div>
+		<p class="phoneNumber"></p>
+		<div class="icon">
+			<img src="../resources/img/addressList/iconphone.png" alt="">
+		</div>
+	</div>
+	<script>
+		$('.content div').click(function(){
+			$(this).children('span').css({'height':'6rem','fontSize':'2rem','lineHeight':'6rem'})
+				   .parent().siblings().children('span').css({'height':'4rem','fontSize':'1.5rem','lineHeight':'4rem'});
+			$(this).children('div').show().parent().siblings().children('div').hide();
+			$(this).children('.name').css({'width':'48%','marginLeft':'6%'}).parent().siblings().children('.name').css({'width':'50%','marginLeft':'0'});
+		});
+		$('.phone').click(function(){
+			$('.call').css('display','block');
+			$('.mask').css({
+				'width':'document.body.clientWidth',
+				'height':'document.body.clientHeight',
+				'display':'block'
+			});
+			var num = $(this).parent().children('.number').html();
+			$('.call').children('p').html(num);
+		});
+		$('.closeBtn img').click(function(){
+			$('.mask').css('display','none');
+			$('.call').css('display','none');
+		});
+	</script>
+</body>
+</html>

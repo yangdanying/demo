@@ -1,0 +1,125 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a,a:link,a:visited,a:hover,a:active{
+	text-decoration:none;
+	color: #000;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);/*去掉点击时背景色改变的效果*/
+}
+div{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);/*去掉点击时背景色改变的效果*/
+}
+html{
+	font-size: 10px;
+}
+body{
+	background-image: url(../img/login/daotu.gif);
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-size:cover;
+	-moz-background-size:cover;
+	-webkit-background-size:cover;
+}
+hr{
+	background-color: #eee;
+	width: 98%;
+	margin: 0 auto;
+}
+.logo{
+	width: 12.5rem;
+	height: 12.5rem;
+	margin: 6.25rem auto 5.5rem;
+}
+.logo img{
+	width: 12.5rem;
+	height: 12.5rem;
+}
+/*登录信息区*/
+.second{
+	width: 23rem;
+	height: 18.5rem;
+	margin: 0 auto;
+	border-radius: 1.5rem;
+	box-shadow: 0 1rem 7rem 1rem #8a8989;
+	background-color: white;
+}
+.second .box{
+	width: 85%;
+	height: 7rem;
+	margin: 0 auto;
+	padding: 1.5rem 0 0;
+	position: relative;
+}
+.second .box span{
+	display: inline-block;
+	margin-right: 1rem;
+	color: #7d7d7d;
+	font-size: 2rem;
+}
+.second .box input{
+	width: 85%;
+	height: 2rem;
+	line-height: 2rem;
+	margin-top: 1rem;
+	border: none;
+	font-size: 2rem;
+	background-color: transparent;
+}
+.second .box input:focus{
+	outline: none;
+}
+.second .box i{
+	display: block;
+	float: right;
+	width: 2.5rem;
+	height: 2.5rem;
+	background-image: url(../img/login/user.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.second .box i#icon2{
+	background-image: url(../img/login/account.png);
+	background-size: 100% 99%;
+}
+.second .box .error{
+	display: none;
+	position: absolute;
+	top: -2px;
+	left: -1rem;
+	width: 110%;
+	height: 2.5rem;
+	border-bottom-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+	background: url(../img/login/bg.gif) no-repeat;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	filter:blur(5px);
+}
+/*登录信息区结束*/
+.btn{
+	position: relative;
+	top: -1.5rem;
+	left: 50%;
+	width: 8.5rem;
+	height: 3rem;
+	margin-left: -4.25rem;
+	line-height: 3rem;
+	background-color: #3db667;
+	border-radius: 4rem;
+	box-shadow: 0 1rem 5rem 0.5rem #8a8989;
+	text-align: center;
+	cursor: pointer;
+}
+.btn a{
+	display: inline-block;
+	color: #fff;
+}
+.btn span{
+	font-size: 2rem;
+	margin-left: 0.5rem;
+}
+.btn span:first-of-type{
+	margin-left: 0;
+	margin-right: 0.5rem;
+}

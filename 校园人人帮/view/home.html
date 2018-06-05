@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name ="viewport" content ="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<title>Home</title>
+	<link rel="stylesheet" href="../resources/css/jquery-ui.min.css">
+	<link rel="stylesheet" href="../resources/css/home.css">
+	<script src="../resources/js/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/jquery-ui.min.js"></script>
+	<script src="../resources/js/jquery.ui.touch-punch.min.js"></script>
+</head>
+<body>
+	<header>
+		<div>
+			<i id="icon1"></i>
+			<a href="myself_transform.html"><i id="icon2"></i></a>
+		</div>
+	</header>
+	<!-- 左上角的菜单 -->
+	<div class="mask" id="mask"></div>
+	<div class="menu" id="menu">
+		<div class="closeBtn">
+			<img src="../resources/img/home/close.png" alt="关闭" id="closeBtn">
+		</div>
+		<a class="chose" href="school.html">
+			<img src="../resources/img/home/campusraiders.png" alt="">
+			<span>校园攻略</span>
+			<span>Campus Raiders</span>
+		</a>
+		<a class="chose" href="calendar.html">
+			<img src="../resources/img/home/dailylesson.png" alt="">
+			<span>每日一课</span>
+			<span>Daily Lesson</span>
+		</a>
+		<a class="chose" href="addressList.html">
+			<img src="../resources/img/home/campusaddressbook.png" alt="">
+			<span>校园通讯录</span>
+			<span>Campus Address Book</span>
+		</a>
+		<a class="chose" href="baomingchenggong.html">
+			<img src="../resources/img/home/work-studyprogramme.png" alt="">
+			<span>勤工俭学</span>
+			<span>Work-Study Programme</span>
+		</a>
+		<a class="chose"  href="tousujianyi.html">
+			<img src="../resources/img/home/suggestion.png" alt="">
+			<span>投诉建议</span>
+			<span>Suggestion</span>
+		</a>
+		<a class="chose" href="jianlizhizuo.html">
+			<img src="../resources/img/home/resumemaking.png" alt="">
+			<span>简历制作</span>
+			<span>Resume Making</span>
+		</a>
+	</div>
+	<!-- 菜单区结束 -->
+	<div id="content">
+		<div class="clock">
+			<!-- 外围的12个小白点 -->
+			<div class="point">
+				<i id="twelve"></i>
+				<i id="one"></i>
+				<i id="two"></i>
+				<i id="three"></i>
+				<i id="four"></i>
+				<i id="five"></i>
+				<i id="six"></i>
+				<i id="seven"></i>
+				<i id="eight"></i>
+				<i id="nine"></i>
+				<i id="ten"></i>
+				<i id="eleven"></i>
+			</div>
+			<!-- 内部 -->
+			<div class="box">
+				<!-- 秒针轨迹 -->
+				<div class="wrapper wRight">
+					<div class="circleProcess_out rCycle_out"></div>
+				</div>
+				<div class="wrapper wLeft">
+					<div class="circleProcess_out lCycle_out"></div>
+				</div>
+				<!-- 覆盖秒针轨迹 -->
+				<div class="wrapper wRight">
+					<div class="circleProcessN rCycleN"></div>
+				</div>
+				<div class="wrapper wLeft">
+					<div class="circleProcessN lCycleN"></div>
+				</div>
+				<!-- 静态小球，时针 -->
+				<div class="ball_out ball-static"></div>
+				<!-- 动态小球，秒针 -->
+				<div class="ball_out outBall-move"></div>
+				<!-- 秒针区结束 -->
+				<!-- 内部计划时间区 -->
+				<div class="wrapper wRight">
+					<div class="circleProcess_in rCycle_in"></div>
+				</div>
+				<div class="wrapper wLeft">
+					<div class="circleProcess_in lCycle_in"></div>
+				</div>
+				<!-- 进度条首位端的小球 -->
+				<div class="ball_in"></div>
+				<div class="ball_in inBall-move"></div>
+				<!-- 内部计划时间区结束 -->
+				<!-- 正中数字显示区 -->
+				<div class="timeShow">
+					<p id="tiemChosing">20</p>
+					<span id="unitChosing">天</span>
+				</div>
+				<!-- 正中数字显示区结束 -->
+			</div>
+		</div>
+		<!-- 计划安排区 -->
+		<div class="item" id="item">
+			<div class="plan">
+				<div class="greenLine lineShow"></div>
+				<div class="leftPart">
+					<span>02/15</span><span>上午8:00</span>
+					<p>距离英语四级考试还剩</p>
+				</div>
+				<div class="rightPart">
+					<span class="lastTime">120</span><span class="unit">天</span>
+				</div>
+			</div>
+			<div class="plan">
+				<div class="greenLine"></div>
+				<div class="leftPart">
+					<span>04/18</span><span>下午15:50</span>
+					<p>距离五一还剩</p>
+				</div>
+				<div class="rightPart">
+					<span class="lastTime">12</span><span class="unit">天</span>
+				</div>
+			</div>
+			<div class="plan">
+				<div class="greenLine"></div>
+				<div class="leftPart">
+					<span>07/01</span><span></span>
+					<p>距离暑假还剩</p>
+				</div>
+				<div class="rightPart">
+					<span class="lastTime">7</span><span class="unit">天</span>
+				</div>
+			</div>
+			<div class="plan">
+				<div class="greenLine"></div>
+				<div class="leftPart">
+					<span>04/19</span><span>上午8:00</span>
+					<p>距离专业课上课还剩</p>
+				</div>
+				<div class="rightPart">
+					<span class="lastTime">20</span><span class="unit">小时</span>
+				</div>
+			</div>
+			<!-- 隐藏区 -->
+			<div class="plan hide">
+				<div class="greenLine"></div>
+				<div class="leftPart">
+					<span class="">07/01</span><span></span>
+					<p>距离暑假还剩</p>
+				</div>
+				<div class="rightPart">
+					<span class="lastTime">7</span><span class="unit">天</span>
+				</div>
+			</div>
+			<div class="plan hide">
+				<div class="greenLine"></div>
+				<div class="leftPart">
+					<span>04/19</span><span>上午8:00</span>
+					<p>距离专业课上课还剩</p>
+				</div>
+				<div class="rightPart">
+					<span class="lastTime">20</span><span class="unit">小时</span>
+				</div>
+			</div>
+			<!-- 隐藏区结束 -->
+		</div>
+		<div class="showBtn" id="showBtn">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<!-- 计划安排区结束 -->
+	</div>
+	<script>
+		window.onload = function(){
+            //获取当前时间
+            var iTime = new Date();
+            var month = iTime.getMonth()+1;//当前月份(0-11)
+            var date = iTime.getDate();
+		};
+		var menuBtn = document.getElementById('icon1');
+		var mask = document.getElementById('mask');
+		var menu = document.getElementById('menu');
+		var menuClose = document.getElementById('closeBtn');
+		menuBtn.onclick = function(){
+			menu.style.display = 'block';
+			//蒙板效果
+			mask.style.width = document.body.clientWidth;
+			mask.style.height = document.body.clientHeight;
+			mask.style.display = 'block';
+			if(mask.style.display == 'block'){
+				mask.onclick = function(){
+					menu.style.display = 'none';
+					mask.style.display = 'none';
+				}
+			}
+		};
+		menuClose.onclick = function(){
+			menu.style.display = 'none';
+			mask.style.display = 'none';
+		};
+
+		//下端小点点击效果
+		var hide = document.getElementsByClassName('hide');
+		var showBtn = document.getElementById('showBtn');
+		showBtn.onclick = function(){
+			for(var i=0;i<hide.length;i++){
+				hide[i].style.display ='block';
+			}
+			this.style.display = 'none';
+		};
+		//拖拽效果
+		var planTime = document.getElementById('tiemChosing');
+		var unit = document.getElementById('unitChosing');
+		$(function(){
+			$('#item').sortable();
+			$('#item').disableSelection();
+			$('#item div.plan').mousedown(function(){
+				//拖拽时变色效果
+				$(this).css('backgroundColor','#fff');
+				$(this).children().css('color','#000');
+				$(this).children().children('.lastTime').css('color','#40bb6b');
+				//拖拽时时钟中间数字改变效果
+				planTime.innerHTML = $(this).children().children('.lastTime').text();   //改数字
+				unit.innerHTML = $(this).children().children('.unit').text();   //改单位
+				//拖拽时绿条出现效果
+				$(this).children('.greenLine').addClass('lineShow')
+					   .parent().siblings().children('.greenLine').removeClass('lineShow');
+			});
+			$('#item div.plan').mouseup(function(){
+				$(this).css('backgroundColor','#31353e');
+				$(this).children().css('color','#fff');
+				$(this).children().children('.lastTime').css('color','#fff');
+			});
+		});
+	</script>
+</body>
+</html>

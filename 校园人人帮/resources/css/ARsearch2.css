@@ -1,0 +1,154 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a,a:link,a:visited,a:hover,a:active{
+	text-decoration:none;
+	color: #000;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+div{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+input:focus{
+	outline: none;
+}
+html{
+	font-size: 10px;
+}
+header{
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 5rem;
+	background-color: #454253;
+	color: #fff;
+	z-index: 100;
+}
+header>div{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+header a{
+	display: inline-block;
+}
+header a.back{
+	position: relative;
+	top: 1.42rem;
+	left: 1.5rem;
+	width: 1.55rem;
+	height:2.17rem;
+}
+header a.back img{
+	display: block;
+	width: 1.5rem;
+	height: 2.17rem;
+	margin: 0 auto;
+}
+header a.search{
+	position: absolute;
+	top: 1.2rem;
+	right: 1.5rem;
+	width: 2.5rem;
+	height: 2.5rem;
+	text-align: center;
+}
+header a.search img{
+
+	width: 2.5rem;
+	height: 2.5rem;
+
+}
+header p{
+	display: inline-block;
+	position: absolute;
+	top: 3.2rem;
+	left: 50%;
+	width: 15rem;
+	height: 1rem;
+	margin-left: -7.5rem;
+	color: #fff;
+	line-height: 1rem;
+	text-align: center;
+}
+header p:first-of-type{
+	top: 0.7rem;
+	height: 3.1rem;
+	line-height: 2.5rem;
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+.zhanwei{
+    width:100%;
+    height:60px;
+    margin:0 auto;
+}
+.content{
+	width: 100%;
+	height: 57.5rem;
+	background-image: url(../img/AR/Apic2.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.content .tip{
+	position: relative;
+	top: 4.5rem;
+	left: 50%;
+	width: 22rem;
+	height: 15rem;
+	margin-left: -11rem;
+	border-radius: 1.5rem;
+	background-color: #d8eefe;
+	filter: Alpha(opacity = 8);
+	-webkit-opacity: 0.8;
+	-moz-opacity: 0.8;
+	-o-opacity: 0.8;
+	-ms-opacity: 0.8;
+	text-align: center;
+}
+.content .tip p{
+	padding: 2rem 0 1rem;
+	font-size: 3rem;
+	font-weight: bold;
+	color: #1b1b1b;
+}
+.content .tip span{
+	display: inline-block;
+	font-size: 2rem;
+	color: #535353;
+}
+.content .tar{
+	position: relative;
+	top: 10.5rem;
+	left: 5.5rem;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+	background-color: #d8eefe;
+	filter: Alpha(opacity = 8);
+	-webkit-opacity: 0.8;
+	-moz-opacity: 0.8;
+	-o-opacity: 0.8;
+	-ms-opacity: 0.8;
+	line-height: 5rem;
+	font-size: 1.5rem;
+	text-align: center;
+}
+.content .dirc{
+	position: fixed;
+	bottom: 1rem;
+	left: 1rem;
+	width: 8rem;
+	height: 4rem;
+}
+.content .dirc img{
+	widows: 8rem;
+	height: 4rem;
+}
+.content .arrow{
+	position: absolute;
+	bottom: -6rem;
+	left: 6rem; 
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>print_one</title>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../resources/css/print.css">
+</head>
+<body>
+	<header>
+		<div class="head">
+			<a href="javascript:history.go(-1)"><img src="../resources/img/print/back@3x.png"></a>
+			<h1>自助打印</h1>
+			<h2>Self-service Printing</h2>
+		</div>
+	</header>
+	<!--提取码部分-->
+	<div class="touming" id="oDiv"></div>
+	<div class="box" id="box1">
+		<div class="details">
+			<a href="print_one.html"><img src="../resources/img/print/close@2x.png" class="one"></a>
+			<h1>254 658</h1>
+			<h2>提取码</h2>
+			<hr/>
+			<p class="three">可以自助打印机输入提取码<br/>提取文件</p>
+			<div class="footer">
+				<p>扫码支付</p>
+				<img src="../resources/img/print/two_dimension_code.png" class="two">
+			</div>
+		</div>
+	</div>
+	<!--提取码部分结束-->
+	<div class="logo">
+		<img src="../resources/img/print/document@2x.png">
+		<a href="javascript:;">点击预览</a>
+	</div>
+	<div class="all">
+		<div class="content1">
+		    <div class="box9">
+                <div class="left">
+                    <h1>打印章节</h1>
+                    <h2>Print Section</h2>
+                </div>
+                <div class="right">
+                    <p>1-5P</p>
+                </div>
+            </div>
+			<div class="box9">
+                <div class="left">
+                    <h1>打印数目</h1>
+                    <h2>Print Number</h2>
+                </div>
+                <div class="right">
+                    <p>1份</p>
+                </div>
+            </div>
+            <div class="box9">
+                <div class="left">
+                    <h1>金额</h1>
+                    <h2>Money</h2>
+                </div>
+                <div class="right">
+                    <p>0.1元</p>
+                </div>
+            </div>
+		</div>
+	</div>
+	<div class="footer1">
+		<a href="#"> <input type="submit" name="" value="打印" class="button" id="sub" onclick="tijiao()"></a>
+	</div>
+</body>
+<!--js原生代码-->
+<script type="text/javascript">
+	function tijiao(){
+		var oBox=document.getElementById('box1');
+		var oDiv=document.getElementById('oDiv');
+		oDiv.style.display='block';
+		oBox.style.display='block';
+	}
+</script>
+<!--js原生代码结束-->
+</html>

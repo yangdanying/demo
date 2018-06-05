@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+	<meta charset="utf-8">
+	<meta name ="viewport" content ="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link href="../resources/css/login.css" rel="stylesheet">
+    <script type="text/javascript" src="../resources/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   		});
+    </script>
+</head>
+<body>
+	<div class="logo">
+		<img src="../resources/img/login/icon.png">
+	</div>
+	<div class="second">
+		<div class="box">
+			<span>帐号</span><span>Identity</span><br>
+			<input type="text" name="user" id="account" placeholder="请输入帐号">
+			<i></i>
+		</div>
+		<hr>
+		<div class="box">
+			<span>密码</span><span>Password</span><br>
+			<input type="password" name="password" id="password" placeholder="请输入密码">
+			<i id="icon2"></i>
+			<div class="error" id="error"></div>
+		</div>
+	</div>
+	<div class="btn" id="logBtn">
+		<a href="javascript:"><span>登</span><span>录</span></a>
+	</div>
+	<script type="text/javascript">
+		var account = document.getElementById('account');
+		var password = document.getElementById('password');
+		var reg = /^\d{8}$/;   //正则表达式，检测是否为8位数字
+		var reg2 = /^\w{18}$/;   //检测是否为18位的身份证号码
+		var error = document.getElementById('error');
+		var logBtn = document.getElementById('logBtn');
+		logBtn.onclick = function(){
+			if(reg.test(account.value)){
+
+			}
+			else{
+				error.style.display = 'block';
+			}
+			if(reg2.test(password.value)){
+
+			}
+			else{
+				error.style.display = 'block';
+			}
+			if(reg.test(account.value)&&reg2.test(password.value)){
+				localStorage.setItem('user',account.value);
+				$('#logBtn a').attr('href','home.html');
+			}
+		}
+	</script>
+</body>
+</html>

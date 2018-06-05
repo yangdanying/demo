@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name ="viewport" content ="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<title>school calendar</title>
+	<link rel="stylesheet" type="text/css" href="../resources/css/calendar.css">
+    <script type="text/javascript" src="../resources/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=qtn0BleHgaalQwwCTHY15yTh8zgy1PkW"></script>
+</head>
+<body>
+	<header>
+		<div class="head">
+			<a href="javascript:history.go(-1)" class="back"><img src="../resources/img/calendar/back.png"></a>
+			<p>每日一课</p>
+			<p>Daliy Lesson</p>
+			<!-- <a href="javascript:" class="calendar"><img src="../resources/img/calendar/nav-button-calerden-default.png"></a> -->
+		</div>
+	</header>
+	<!-- 日历区 -->
+	<div class="calendar">
+		<div class="box">
+			<div class="left">
+				<div class="date" id="numb">
+					<h1>13</h1>
+					<p>March</p>
+				</div>
+				<p>今日有课</p>
+			</div>
+			<div class="right">
+				<ul class="titleLine">
+					<li>Su</li>
+					<li>Mo</li>
+					<li>Tu</li>
+					<li>We</li>
+					<li>Th</li>
+					<li>Fr</li>
+					<li>Sa</li>
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+					<ul id="dateChose">
+						<li class="num" id="i1">1</li>
+						<li class="num" id="i2">2</li>
+						<li class="num" id="i3">3</li>
+						<li class="num" id="i4">4</li>
+						<li class="num" id="i5">5</li>
+						<li class="num" id="i6">6</li>
+						<li class="num" id="i7">7</li>
+						<li class="num" id="i8">8</li>
+						<li class="num" id="i9">9</li>
+						<li class="num" id="i10">10</li>
+						<li class="num" id="i11">11</li>
+						<li class="num" id="i12">12</li>
+						<li class="num active" id="i13">13</li>
+						<li class="num" id="i14">14</li>
+						<li class="num" id="i15">15</li>
+						<li class="num" id="i16">16</li>
+						<li class="num" id="i17">17</li>
+						<li class="num" id="i18">18</li>
+						<li class="num" id="i19">19</li>
+						<li class="num" id="i20">20</li>
+						<li class="num" id="i21">21</li>
+						<li class="num" id="i22">22</li>
+						<li class="num" id="i23">23</li>
+						<li class="num" id="i24">24</li>
+						<li class="num" id="i25">25</li>
+						<li class="num" id="i26">26</li>
+						<li class="num" id="i27">27</li>
+						<li class="num" id="i28">28</li>
+						<li class="num" id="i29">29</li>
+						<li class="num" id="i30">30</li>
+					</ul>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- 日历结束 -->
+	<div class="kebiao">
+		<div class="box">
+			<div class="left">
+				<span>周三</span><br/>
+				<span>1：00 PM</span><br/>
+				<span><img src="../resources/img/calendar/icon.png">B412</span>
+			</div>
+			<div class="line"></div>
+			<div class="right">
+				<p class="m">大学英语四/<span>College English 4</span></p>
+				<p>1:20-4:40 PM</p>
+				<p><img src="../resources/img/calendar/location.png">B楼B412</p>
+				<p>800 M</p>
+			</div>
+		</div>
+	</div>
+	<!-- 计划安排区 -->
+	<div class="reminder">
+		<h1>我的提醒 / My reminder</h1>
+		<ul id="plan">
+			<li>
+				<div class="left">
+					<span>2017/4/22</span><span>8:00 AM</span><br>
+					<span>英语三级考试</span><span>B112</span>
+				</div>
+				<div class="right">
+					<span>32</span><span>Days</span>
+				</div>
+				<div class="greenLine"></div>
+			</li>
+			<li>
+				<div class="left">
+					<span>2017/8/10</span><span>8:00 AM</span><br>
+					<span>普通话考试</span><span>人民大街6755号</span>
+				</div>
+				<div class="right">
+					<span>126</span><span>Days</span>
+				</div>
+				<div class="greenLine"></div>
+			</li>
+			<li class="last">
+				<div class="left">
+					<span>2017/9/01</span><span></span><br>
+					<span>开学</span><span></span>
+				</div>
+				<div class="right">
+					<span>150</span><span>Days</span>
+				</div>
+				<div class="greenLine"></div>
+			</li>
+		</ul>
+		<div class="add" id="addBtn">
+			<img src="../resources/img/calendar/nav-button-add-default.png">
+		</div>
+	</div>
+	<!-- 计划安排区结束 -->
+	<!-- 弹出时的蒙板 -->
+	<div id="mask"></div>
+	<!-- 蒙板结束 -->
+	<!-- 弹出区 -->
+	<div class="addPlan" id="addPlan">
+		<div class="planTitle">
+			<img src="../resources/img/calendar/close.png" alt="">
+			<div class="box">
+				<span>标题</span><span>Title</span><br>
+				<input type="text" id="name" placeHolder="请输入标题">
+			</div>
+			<div class="box">
+				<span>位置</span><span>Location</span><br>
+				<input type="text" id="address" placeHolder="请输入地址">
+			</div>
+			<div class="mapBtn">地图 Open the map</div>
+			<!-- 百度地图 -->
+			<div class="map" id="map"></div>
+		</div>
+		<div class="line"></div>
+		<div class="planTime">
+			<div class="count">
+				<span>倒计时</span><span>Count Down</span>
+				<div class="track">
+					<div class="countBtn"></div>
+				</div>
+			</div>
+			<ul>
+				<li>
+					<span>开始</span><span>Start</span>
+					<div class="choose" id="pStart">
+						<span>2017</span>
+						<span>-</span>
+						<input type="text" class="mons">
+						<span>-</span>
+						<input type="text" class="days">
+					</div>
+				</li>
+				<li>
+					<span>结束</span><span>End</span>
+					<div class="choose" id="pEnd">
+						<span>2017</span>
+						<span>-</span>
+						<input type="text" class="mons">
+						<span>-</span>
+						<input type="text" class="days">
+					</div>
+				</li>
+				<li>
+					<span>时间</span><span>Time</span>
+					<div class="choose2">
+						<!-- <span id="hour"></span> -->
+						<input type="text" id="hour" maxlength="2">
+						<span>:</span>
+						<!-- <span id="minute"></span> -->
+						<input type="text" id="minute" maxlength="2">
+						<span id="halfDay"></span>
+					</div>
+				</li>
+			</ul>
+			<!-- 时间选择转轮(去除，待定) -->
+			<!-- <div class="timeSwiper">
+				<ul class="ihour"></ul>
+				<ul class="iminute"></ul>
+			</div> -->
+
+			<!-- 时间选择区结束 -->
+			<div class="times">
+				<span>重复</span><span>Repeat</span>
+				<div>
+					<span class="active">一次</span>
+					<span>周一至周五</span>
+					<span>每日</span>
+					<span>法定工作日</span>
+					<span>自定义</span>
+				</div>
+			</div>
+			<div class="showHome">
+				<span>显示首页</span><span>Show Home</span>
+				<div class="track">
+					<div class="countBtn"></div>
+				</div>
+			</div>
+			<div class="addFin" id="addFin">
+				<img src="../resources/img/calendar/nav-button-add-default.png">
+			</div>
+		</div>
+	</div>
+	<!-- 弹出区结束 -->
+
+	<script>
+		var iTime = new Date();
+		var year = iTime.getFullYear();
+		var month = iTime.getMonth()+1;
+		var day = iTime.getDate();
+		var hours = iTime.getHours();
+		var minutes = iTime.getMinutes();
+
+		var oDiv=document.getElementById('calendar');
+		var oSpan=document.getElementById('dateChose');
+		var oLi=oSpan.getElementsByTagName('li');
+		var div=document.getElementById('numb');
+		for(var i=0;i<oLi.length;i++)
+		{
+		 	oLi[i].index=i;
+		 	oLi[i].onclick=function()
+		 	{
+		 		for(var i=0;i<oLi.length;i++)
+		 		{
+		 			oLi[i].className='';
+		 		}
+		 		this.className='active';
+		 		div.innerHTML='<h1>'+(this.index+1)+'</h1><p>March</p>';
+		 	}
+		}
+
+		$('#plan li').click(function(){
+			$(this).children('.greenLine').css('display','block')
+				   .parent().siblings().children('.greenLine').css('display','none');
+		});
+
+		//添加计划效果
+		$('#addBtn').click(function(){
+			$('#addPlan').css('display','block');
+			$('#mask').css('display','block');
+			$('.choose').children('span:first-child').html(year);
+			$('.choose').children('.mons').val(month);
+			$('.choose').children('.days').val(day);
+			$('.choose2').children('#hour').val(hours);
+			$('.choose2').children('#minute').val(minutes);
+			// $('.choose2').children('#hour').html(hours);
+			// $('.choose2').children('#minute').html(minutes);
+			//上下午的判定
+			halfDayJudge(hours,minutes);
+
+			//分钟的判定
+			minsJudge(minutes);
+
+			$('.mons').focus(function(){
+				$(this).val('');
+			});
+			$('.days').focus(function(){
+				$(this).val('');
+			});
+			$('#hour').focus(function(){
+				$(this).val('');
+			});
+			$('#minute').focus(function(){
+				$(this).val('');
+			});
+			
+			//判断时间的输入
+			$('#pStart .mons').blur(function(){//月份
+				monJudge($(this));
+			});
+			$('#pStart .days').blur(function(){//日期
+				dayJudge($(this),$('.choose .mons'));
+			});
+			$('#pEnd .mons').blur(function(){
+				monJudge($(this));
+			});
+			$('#pEnd .days').blur(function(){
+				dayJudge($(this),$('.choose .mons'));
+			});
+			function monJudge(tar){
+				var monsVal = $(tar).val();
+				if(monsVal < 1){
+					$(tar).val('01');
+				}
+				else if(monsVal > 12){
+					$(tar).val('12');
+				}
+				else if(monsVal == ''){
+					$(tar).val(month);
+				}
+			}
+			function dayJudge(tar1,tar2){
+				var daysVal = $(tar1).val();
+				var monsVal = $(tar2).val();
+				if(monsVal==1||monsVal==3||monsVal==5||monsVal==7||monsVal==9||monsVal==11){
+					if(daysVal < 1){
+						$(tar1).val('01');
+					}
+					else if(daysVal > 31){
+						$(tar1).val('31');
+					}
+				}
+				else if(monsVal==2){
+					if(daysVal < 1){
+						$(tar1).val('01');
+					}
+					else if(daysVal > 28){
+						$(tar1).val('28');
+					}
+				}
+				else if(monsVal==4||monsVal==6||monsVal==8||monsVal==10||monsVal==12){
+					if(daysVal < 1){
+						$(tar1).val('01');
+					}
+					else if(daysVal > 30){
+						$(tar1).val('30');
+					}
+				}
+				else if(daysVal == ''){
+					$(tar1).val(day);
+				}
+			}
+
+			$('#hour').blur(function(){
+				halfDayJudge($(this).val(),$('#minute').val());
+			});
+			$('#minute').blur(function(){
+				minsJudge($(this).val());
+			});
+			function halfDayJudge(h,m){
+				if(h > 0&&h < 12){
+					if(h < 10){
+						$('#hour').val('0'+h);
+					}
+					$('#halfDay').html('AM');
+				}
+				else{
+					if(h == 12){
+						if(m > 1){
+							$('#halfDay').html('PM');
+						}
+						else{
+							$('#halfDay').html('AM');
+						}
+					}
+					if(h > 12){
+						$('#halfDay').html('PM');
+					}
+				}
+				if(h == ''){
+					$('#hour').val('01');
+					$('#minute').val('00');
+					$('#halfDay').html('AM');
+				}
+				if(h > 24){
+					$('#hour').val('24');
+					$('#minute').val('00');
+					$('#halfDay').html('PM');
+				}
+				else if(h < 0){
+					$('#hour').val('01');
+					$('#minute').val('00');
+					$('#halfDay').html('AM');
+				}
+				else if(h == 24){
+					$('#minute').val('00');
+					$('#halfDay').html('PM');
+				}
+			}
+
+			function minsJudge(m){
+				if(m > 0&&m < 10){
+					$('#minute').val('0'+m);
+				}
+				else{
+					if(m < 0){
+						$('#minute').val('00');
+					}
+					else if(m > 59){
+						$('#minute').val('00');
+					}
+				}
+			}
+		});	
+		//小时分钟的选择
+		// $('#hour').click(function(){
+		// 	$('.timeSwiper').css('display','block');
+		// });
+		// $('#minute').click(function(){
+		// 	$('.timeSwiper').css('display','block');
+		// });
+		
+		//输入结束，关闭	
+		$('#addFin').click(function(){
+			$('#addPlan').css('display','none');
+			$('#mask').css('display','none');
+			//时间差
+			var m = parseInt($('#pEnd .mons').val()) - parseInt($('#pStart .mons').val());
+			if(m > 1){
+				var d = 30 - parseInt($('#pStart .days').val()) + parseInt($('#pEnd .days').val()) + (m - 1)*30;
+			}
+			else if(m == 0){
+				var d = parseInt($('#pEnd .days').val()) - parseInt($('#pStart .days').val());
+			}
+			else if(m == 1){
+				var d = 30 - parseInt($('#pStart .days').val()) + parseInt($('#pEnd .days').val());
+			}
+			//添加
+			creat($('.last'));
+			function creat(obj){
+				var newLi = "<li><div class='left'><span></span><span></span><br /><span></span><span></span></div><div class='right'><span></span><span>Days</span></div><div class='greenLine'></div></li>";
+				obj.removeClass('last');
+				obj.after(newLi);
+				obj.next().addClass('last');
+				$('#plan .last .left').children('span').eq(0).html(year+'/'+$('#pEnd .mons').val()+'/'+$('#pEnd .days').val());
+				$('#plan .last .left').children('span').eq(1).html($('#hour').val()+':'+$('#minute').val()+' '+$('#halfDay').text());
+				$('#plan .last .left').children('span').eq(2).html($('#name').val());
+				$('#plan .last .left').children('span').eq(3).html($('#address').val());
+				$('#plan .last .right').children('span').eq(0).html(d);//间隔时间
+			}			
+		});	
+		$('.planTitle img').click(function(){
+			$('#addPlan').css('display','none');
+			$('#mask').css('display','none');
+		});		
+		//蒙板点击效果
+		$('#mask').click(function(){
+			$('#addPlan').css('display','none');
+			$(this).css('display','none');
+		});
+		//滑动按钮
+		$('.countBtn').click(function(){
+			if($(this).css('left')=='36px'){
+				$(this).animate({left:'0.5rem'});
+				$(this).parent().css('background-color','#40bb6b');
+			}
+			else{
+				$(this).animate({left:'3rem'});
+				$(this).parent().css('background-color','#dcdcdc');
+			}
+		});
+		//重复模式的选择
+		$('.times div').children().click(function(){
+			$(this).addClass('active').siblings().removeClass('active');
+		});
+	</script>
+
+	<script type="text/javascript">
+		$('.mapBtn').click(function(){
+			$('#map').css('display','block');
+		});
+		//百度地图
+		var map = new BMap.Map("map",{enableMapClick:false});
+		var point = new BMap.Point(116.331398,39.897445);
+		map.centerAndZoom(point,12);
+		map.addEventListener("click", function (){   //关闭地图，必须用监听才有效果
+			$('#map').css('display','none');
+		});
+	</script>
+</body>
+</html>

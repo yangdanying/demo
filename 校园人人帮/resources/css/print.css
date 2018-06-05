@@ -1,0 +1,227 @@
+*{
+	margin: 0 auto;
+	padding: 0;
+	font-family: "微软雅黑";
+	background-color: #f7f8fd;
+}
+html {font-size: 625%;/* 100 ÷ 16 × 100% = 625%*/}
+@media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait) {
+    html { font-size: 703%; }
+}
+@media screen and (min-width:375px) and (max-width:383px) and (orientation:portrait) {
+    html { font-size: 732.4%; }
+}
+@media screen and (min-width:384px) and (max-width:399px) and (orientation:portrait) {
+    html { font-size: 750%; }
+}
+@media screen and (min-width:400px) and (max-width:413px) and (orientation:portrait) {
+    html { font-size: 781.25%; }
+}
+@media screen and (min-width:414px) and (max-width:431px) and (orientation:portrait){
+    html { font-size: 808.6%; }
+}
+@media screen and (min-width:432px) and (max-width:479px) and (orientation:portrait){
+    html { font-size: 843.75%; }
+}
+body{
+	position: relative;
+}
+@font-face{
+	font-family: "dong";
+	src:url('../font/冬青黑体W3.otf');
+}
+header{
+	height: 0.5121rem;
+	width: 100%;
+	background:#454253;
+	color: white;
+	position: relative;
+}
+header .head {
+	background: transparent;
+	padding-top: 0.0990rem;
+}
+header .head img{
+	width: 0.1536rem;
+	height: 0.2219rem;
+	left: 0.1536rem;
+	bottom: 0.145071rem;
+	background: transparent;
+	position: absolute;
+}
+header .head h1{
+	text-align: center;
+	font-size:  0.1536rem;;
+	background: transparent;
+	clear: both;
+}
+header .head h2{
+	text-align: center;
+	font-size: 0.0854px;
+	font-weight: normal;
+	background: transparent;
+	clear: both;
+}
+.logo{
+	width: 100%;
+	text-align:center;
+}
+.logo img{
+	padding-top:0.5291rem; 
+	width: ;
+	height: 1.4337rem;
+}
+.logo a{
+	text-decoration: none;
+	color: #898989;
+	font-weight: bold;
+	display: block;
+	font-size: 0.0939rem;
+}
+.all{
+	margin-top: 0.1195rem;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.content1{
+    margin: 0 auto;
+    width: 2.5601rem;
+    height: 1.3825rem;
+    border:0.0086rem solid #d7d6dc;
+    border-radius: 0.1280rem;
+    box-shadow: 0rem 0rem 0.0427rem #d7d6dc;
+}
+.box9{
+    width: 100%;
+    /*margin-top: 0.1878rem;*/
+    padding-top: 0.1878rem;
+    height: 0.1878rem;
+}
+.left{
+    margin-left: 0.3072rem;
+    float: left;
+    width: 0.7681rem;
+}
+.left h1{
+    font-size: 0.1024rem;
+    color: #858585;
+    text-align: left;
+}
+.left h2{
+    font-size: 0.0683rem;
+    color: #858585;
+    text-align: left;
+}
+.right{
+    float: right;
+    width: 0.435213rem;
+    margin-right: 40px;
+    padding-top: 6px;
+}
+.right p{
+    font-size: 0.0939rem;
+    color: #858585;
+    font-weight: bold;
+    text-align: right;
+}
+.footer1{
+	font-size: 0.1024rem;
+	text-align: center;
+	margin-top: 0.0854rem;
+}
+.button {
+    width: 0.8449rem;
+    height: 0.3328rem;
+    background-color: #3db667;
+    font-size: 0.1536rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 0.8449rem;
+    border: none;
+    box-shadow: 0rem 0rem 0.0427rem #d7d6dc;
+    margin: 0 auto;
+    margin-top: 0.3243rem;
+    text-align: center;
+    letter-spacing: 0.1366rem;
+    padding-left: 0.1280rem;
+}
+
+/*点击后出现部分*/
+.touming{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: #000;
+	filter: alpha(opacity=30);
+	opacity: 0.3;
+	z-index: 9998;
+	display: none;
+}
+.box{
+	width: 76%;
+	height: 2.0652rem;
+	position: absolute;
+	background-color: white;
+	border-radius: 0.1707rem;
+	z-index: 9999;
+	top:26%;
+	left: 12%;
+	text-align: center;
+	display: none;
+}
+.box .details{
+	width: 84%;
+	margin-top: 6%;
+	text-align: center;
+	background: transparent;
+}
+.box .details .one,.box .details .two{
+	float: right;
+}
+.box .details .one{
+	width: 0.1707rem;
+	height: 0.1707rem;
+}
+.box .details h1{
+	font-size: 0.2560rem;
+	letter-spacing: 0.0171rem;
+	clear: both;
+    background: transparent;
+}
+.box .details h2{
+	color: #3db667;
+	font-size: 0.1024rem;
+	font-weight: normal;
+	line-height: 0.2560rem;
+    background: transparent;
+}
+.box .details .three{
+	font-size: 0.1195rem;
+	color: #313131;
+	padding: 0.1024rem 0 0.1195rem 0;
+    background: transparent;
+}
+.box .details .footer{
+	float: right;
+	height: 0.3755rem;
+	width: 0.8534rem;
+    background: transparent;
+}
+.box .details .footer .two{
+	width: 0.3755rem;
+	height: 0.3755rem;
+}
+.box .details .footer p{
+	float: left;
+	font-size:  0.1024rem;
+	padding-top: 0.2390rem;
+	color: #777;
+    background: transparent;
+}
+.test input:focus{
+	outline: none;
+}
+input:focus{
+    outline: none;
+}

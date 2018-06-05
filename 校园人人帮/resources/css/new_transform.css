@@ -1,0 +1,212 @@
+*{
+	margin: 0 auto;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+html {font-size: 625%;/* 100 ÷ 16 × 100% = 625%*/}
+@media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait) {
+    html { font-size: 703%; }
+}
+@media screen and (min-width:375px) and (max-width:383px) and (orientation:portrait) {
+    html { font-size: 732.4%; }
+}
+@media screen and (min-width:384px) and (max-width:399px) and (orientation:portrait) {
+    html { font-size: 750%; }
+}
+@media screen and (min-width:400px) and (max-width:413px) and (orientation:portrait) {
+    html { font-size: 781.25%; }
+}
+@media screen and (min-width:414px) and (max-width:431px) and (orientation:portrait){
+    html { font-size: 808.6%; }
+}
+@media screen and (min-width:432px) and (max-width:479px) and (orientation:portrait){
+    html { font-size: 843.75%; }
+}
+body{
+	position: relative;
+		height: 5.6919rem;
+		background-color: #f7f8fd;
+}
+@font-face{
+	font-family: "dong";
+	src:url('../font/冬青黑体W3.otf');
+}
+a,a:link,a:visited,a:hover,a:active{
+	text-decoration:none;
+	color: #000;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);/*去掉点击时背景色改变的效果*/
+}
+div{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);/*去掉点击时背景色改变的效果*/
+}
+header{
+	height: 0.5121rem;
+	width: 100%;
+	background:#454253;
+	color: white;
+	position: fixed;
+	z-index: 10;
+}
+header .head {
+	background: transparent;
+	padding-top: 0.0990rem;
+}
+header .head .arrow{
+	width: 0.1536rem;
+	height: 0.2219rem;
+	left: 0.1536rem;
+	bottom: 0.145071rem;
+	background: transparent;
+	position: absolute;
+}
+header .head h1{
+	text-align: center;
+	font-size:  0.1536rem;;
+	background: transparent;
+	clear: both;
+}
+header .head h2{
+	text-align: center;
+	font-size: 0.0854px;
+	font-weight: normal;
+	background: transparent;
+	clear: both;
+}
+.garbage_can{
+	position: absolute;
+	background: transparent;
+	height: 0.2134rem;
+    width: 0.2134rem;
+    bottom: 0.165071rem; 
+    right: 0.1536rem;
+}
+.zhanwei{
+	height: 0.5121rem;
+	width: 100%;
+}
+.box{
+	background: #ffffff;
+    height: auto;
+    width: 94%;
+    border-style: none;
+    box-shadow: 0 0.0171rem 0.0768rem #aaaaaa;
+    margin-top: 0.1707rem;
+    position: relative;
+}
+.line{
+	width: 100%;
+	height: 0.8534rem;
+	display: block;
+}
+.line img{
+	float: left;
+	width: 0.5291rem;
+    height: 0.5291rem;
+    margin-top: 0.1963rem;
+    margin-left: 0.1792rem;
+}
+.word{
+	float: left;
+	color: #535353;
+	margin-top: 0.2816rem;
+	padding-left: 0.0854rem;
+}
+a{
+	text-decoration: none;
+}
+.word h1{
+    letter-spacing: 0.0128rem;
+    font-size: 0.128rem;	
+    font-weight: normal;
+}
+.word p{
+	padding-top: 0.0512rem;
+    font-size: 0.0854rem;	
+    color: #b9b9b9;
+    letter-spacing: 0.0043rem;
+}
+.line h2{
+	float: right;
+	font-size: 0.1024rem;
+    color: #b9b9b9;
+    letter-spacing: 0.0128rem;
+    font-weight: normal;
+    margin-top: 0.3414rem;
+    margin-right: 0.1792rem;
+}
+hr{
+	width: 86%;
+	border:solid 0.0086rem #bfbfbf;
+}
+.box h3{
+	font-size: 0.128rem;
+	float: left;
+	margin-top: 0.1963rem;
+    margin-left: 0.1792rem;
+    color: #533535;
+    letter-spacing: 0.0128rem;
+    font-weight: normal;
+}
+.block{
+	height: 0.896rem;
+	width: 100%;
+}
+.box .span{
+	color: #82cca0;
+    font-size: 0.0768rem;
+    position: absolute;
+    right: 10%;
+    top: 13%;
+    text-decoration: none;
+}
+.bot{
+	font-size: 0.0768rem;
+    color: #959595;
+    letter-spacing: 0.0128rem;
+    float: left;
+    margin-top: 0.290142rem;
+	clear: both;
+    margin-left: 0.1792rem;
+}
+.bot p{
+	float: left;
+	padding-right: 0.1707rem;
+}
+.line2{
+	height: 0.6230rem;
+	width: 100%;
+	display: block;
+}
+.time{
+	width: 1.7058rem;
+	float: left;
+    color: #8f8f8f;
+    font-size: 0.0854rem;
+    margin-top: 0.1707rem;
+    margin-left: 0.1792rem;
+}
+.time p{
+	float: left;
+	padding-right: 0.1707rem;
+}
+.line3{
+	width: 100%;
+	clear: both;
+	height: auto;
+	padding-top: 0.0683rem;
+}
+.line3 p{
+	float: left;
+    margin-left: 0.1792rem;
+    letter-spacing: 0.0128rem;
+     font-size: 0.0854rem;
+         color: #8f8f8f;
+}
+.line3 .one{
+	margin-top: -0.0854rem;
+	color: #8f8f8f;
+    font-size: 0.0939rem;
+    letter-spacing: 0.0086rem;
+    float: right;
+    margin-right: 0.1792rem;
+}

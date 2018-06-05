@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>投诉建议</title>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <link href="../resources/css/tousujianyi.css" rel="stylesheet"/>
+</head>
+<body>
+    <header class="like">
+        <a href="javascript:history.go(-1)" class="pong"><img class="pic" src="../resources/img/back@2x.png"/></a>
+        <h1 class="list">投诉建议</h1>
+        <h2 class="list1">Suggestion</h2>
+    </header>
+    <div class="zhanwei"></div>
+    <div class="square">
+        <div class="squarely">
+            <div class="word_one">
+                <h1 >投诉部门</h1>
+                <span >20字</span></br>
+                <h2>Complanints Department</h2>
+            </div>
+            <input type="text" class="character" maxlength="20" placeholder="请输入投诉部门或建议部门"  /></br>
+            <div class="word_two">
+                <h1>投诉内容</h1>
+                <span>200字</span></br>
+                <h2>Complanints Details</h2>
+            </div>
+            <textarea  class="character_one" maxlength="200" placeholder="请输入投诉内容或建议" /></textarea></br>
+        </div>
+        <div class="container">
+            <button class="submit" onclick="showModel()">投诉</button>
+            <div id="myModel" onclick="closeModel()">
+                <div class="model-content">
+                    <p>
+                        <input type="image"  id="closeModel" onclick="closeModel()" src="../resources/img/no.png@2x.png"/>
+                       <!--  <button id="closeModel" onclick="closeModel()"><img class="img0" src="../resources/img/close@2x.png"/></button> -->
+                    </p>
+                    <p><img class="picture" src="../resources/img/icon-png@2x.png"/></p>
+                    <div class="print">
+                        <p class="h1">投诉成功</p>
+                        <p class="h2">投诉内容将在三天之内处理</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function showModel() {
+            document.getElementById('myModel').style.display = 'block';
+        }
+        function closeModel() {
+            document.getElementById('myModel').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

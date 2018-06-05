@@ -1,0 +1,300 @@
+*{
+	margin: 0 auto;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+body{
+	position: relative;
+}
+@font-face{
+	font-family: "dong";
+	src:url('../font/冬青黑体W3.otf');
+}
+a,a:link,a:visited,a:hover,a:active{
+	text-decoration:none;
+	color: #000;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);/*去掉点击时背景色改变的效果*/
+}
+div{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);/*去掉点击时背景色改变的效果*/
+}
+.fix{
+	position: fixed;
+	width: 100%;
+	top: -17px;
+}
+.left{
+	float: left;
+	margin-left: 36px;
+}
+.right{
+	float: right;
+	quotes: 
+	margin-right: 12px;
+}
+header{
+	height: 67px;
+	width: 100%;
+	background:#454253;
+	color: white;
+	position: relative;
+}
+header .head {
+	background: transparent;
+	padding-top: 28px;
+}
+header .head img{
+	width: 18px;
+	height: 26px;
+	left: 18px;
+	bottom: 8px;
+	background: transparent;
+	position: absolute;
+}
+header .head h1{
+	text-align: center;
+	font-size: 18px;
+	background: transparent;
+	clear: both;
+}
+header .head h2{
+	text-align: center;
+	font-size: 10px;
+	font-weight: normal;
+	background: transparent;
+	clear: both;
+}
+header .head .b{
+	width: 30px;
+	height: 30px;
+	background: transparent;
+	display: block;
+	position: absolute;
+    right: 40px;
+    top: 40px;
+}
+header .head .b img{
+	width: 30px;
+	height: 30px;
+}
+.head2{
+	width: 100%;
+    height: 198px;
+    background: #454253;
+    color: white;
+    box-shadow: 0px 0px 25px 7px #555;
+}
+.line{
+	padding-top: 20px;
+}
+.year{
+	width: 140px;
+	font-size: 14px;
+}
+.year p{
+	float: left;
+}
+.year p a img{
+	width: 10px;
+	height: 6px;
+	margin-left: 5px;
+}
+.year span{
+	float: right;
+	width: 101px;
+}
+.year span p{
+	font-size: 10px;
+	padding-top: 3px;
+}
+.line2{
+	width: 200px;
+	height: 16px;
+	clear: both;
+	padding-top: 12px;
+	margin-left: 28px;
+}
+.line2 li{
+	list-style: none;
+	float: left;
+	width: 56px;
+	font-size: 8px;
+	padding-left: 10px;
+}
+.line2 div{
+	width: 10px;
+	height: 10px;
+	border-radius:10px;
+	background-color: white;
+	float: left;
+	margin-top: 2px;
+	margin-right: 4px;
+}
+.active1{
+	background:url('../img/bg1.png') repeat;
+}
+.line3{
+	height: 110px;
+	width: 100%;
+	padding-top: 10px;
+}
+.left2{
+	float: left;
+	width: 112px;
+	height: 110px;
+	margin-left: 26px;
+	text-align: center;
+}
+.left2 .circle{
+	width: 84px;
+	height: 84px;
+	border-radius: 84px;
+	background-color: #f54e56;
+}
+.left2 .circle h1{
+	font-size: 22px;
+	font-weight: normal;
+	padding-top: 22px;
+}
+.left2 .circle h2{
+	font-size: 14px;
+	font-weight: normal;
+}
+.left2 h3{
+	font-size: 12px;
+	font-weight: normal;
+	margin-top: 6px;
+}
+.right2{
+	font-size: 10px;
+	line-height: 22px;
+	width: 210px;
+	float: left;
+	margin-left: 10px;
+}
+.content{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	color: black;
+	overflow: hidden;
+}
+.zhanwei{
+	height: 248px;
+	width: 100%;
+}
+.box{
+	margin-top: 22px;
+	width: 90%;
+	height: 182px;
+	box-shadow: 0px 0px 25px 7px #e0e0e0;
+	background-color: #ffffff;
+}
+.box h1{
+	font-size: 14px;
+	color: #565656;
+	font-weight: normal;
+	text-align: left;
+	margin: 15px 0 0 14px;
+	padding-top: 15px;
+}
+.box p{
+	font-size: 10px;
+	color: #b0b0b0;
+	float: left;
+	width: 96px;
+	padding-left: 20px;
+	text-align: left;
+	line-height: 24px;
+}
+table{
+	width: 80%;
+	text-align: left;
+	color: #5a5a5a;
+	font-size: 14px;
+	margin-left: 20%;
+	padding-top: 6px;
+}
+.box h2 a{
+	font-size: 10px;
+	color: #b0b0b0;
+	font-weight: normal;
+	float: left;
+	padding-left: 20px;
+	text-decoration: none;
+	padding-top: 20px;
+}
+.searching{
+	position: fixed;
+	width: 44px;
+	height: 44px;
+	border-radius: 44px;
+	background-color: #40bb6b;
+	color: white;
+	right: 10px;
+	bottom: 10px;
+	cursor: pointer;
+	text-align: center;
+	box-shadow: 0px 0px 25px 7px #e0e0e0;
+}
+.searching h1{
+	font-size: 12px;
+	margin-top: 14px;
+	letter-spacing: 2px;
+}
+#div2{
+	top: 106px;
+    left: 78px;
+	width: 88px;
+	height: 126px;
+	position: absolute;
+	border-radius:8px; 
+	background-color: white;
+	display: none;
+}
+#div2 ul{
+	padding-top: 6px;
+}
+#div2 li{
+	list-style: none;
+	text-align: center;
+	line-height: 23px;
+}
+#div2 li a{
+	text-decoration: none;
+	display: block;
+}
+.a1{
+	color: #979797;
+	font-size: 6px;
+}
+.active{
+	width: 96px;
+	height: 23px;
+	color: white;
+	font-size: 8px;
+	margin-left: -4px;
+	background-color:#29b466; 
+}
+#div3{
+	top: 106px;
+    right: 37px;
+	width: 88px;
+	height: 60px;
+	position: absolute;
+	border-radius:8px; 
+	background-color: white;
+	display: none;
+}
+#div3 ul{
+	padding-top: 6px;
+}
+#div3 li{
+	list-style: none;
+	text-align: center;
+	line-height: 23px;
+}
+#div3 li a{
+	text-decoration: none;
+	display: block;
+}

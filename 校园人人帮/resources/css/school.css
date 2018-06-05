@@ -1,0 +1,360 @@
+*{
+	margin: 0 auto;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+html {font-size: 625%;/* 100 ÷ 16 × 100% = 625%*/
+	background-color: #f7f8fd; 
+}
+@media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait) {
+    html { font-size: 703%; }
+}
+@media screen and (min-width:375px) and (max-width:383px) and (orientation:portrait) {
+    html { font-size: 732.4%; }
+}
+@media screen and (min-width:384px) and (max-width:399px) and (orientation:portrait) {
+    html { font-size: 750%; }
+}
+@media screen and (min-width:400px) and (max-width:413px) and (orientation:portrait) {
+    html { font-size: 781.25%; }
+}
+@media screen and (min-width:414px) and (max-width:431px) and (orientation:portrait){
+    html { font-size: 808.6%; }
+}
+@media screen and (min-width:432px) and (max-width:479px) and (orientation:portrait){
+    html { font-size: 843.75%; }
+}
+body{
+	position: relative;
+		height: 5.6919rem;
+}
+@font-face{
+	font-family: "dong";
+	src:url('../font/冬青黑体W3.otf');
+}
+a,a:link,a:visited,a:hover,a:active{
+	text-decoration:none;
+	color: #000;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);/*去掉点击时背景色改变的效果*/
+}
+div{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);/*去掉点击时背景色改变的效果*/
+}
+header{
+	height: 0.5121rem;
+	width: 100%;
+	background:#454253;
+	color: white;
+	position: fixed;
+    z-index: 100;
+}
+.zhanwei{
+		height: 0.5121rem;
+			width: 100%;
+}
+header .head {
+	background: transparent;
+	padding-top: 0.0990rem;
+}
+header .head .arrow{
+	width: 0.1536rem;
+	height: 0.2219rem;
+	left: 0.1536rem;
+	bottom: 0.145rem;
+	background: transparent;
+	position: absolute;
+}
+header .head h1{
+	text-align: center;
+	font-size:  0.1536rem;;
+	background: transparent;
+	clear: both;
+	line-height: 0px;
+	margin-top: 13px;
+	font-weight: bold;
+}
+header .head h2{
+	    padding-top: 4px;
+	text-align: center;
+	font-size: 0.0854px;
+	font-weight: normal;
+	background: transparent;
+	clear: both;
+	    margin-top: 0px;
+}
+.lunbo {
+    width: 100%;
+        height: 200px;
+}
+.swiper-slide img {
+    width: 100%;
+    height: 200px;
+}
+.arrow2{
+	position: absolute;
+	background: transparent;
+	height: 0.2134rem;
+    width: 0.2134rem;
+    bottom: 0.165071rem; 
+    right: 0.1536rem;
+}
+.nav{
+	width: 90%;
+	height: 50px;
+	box-shadow: 0 0 5px 5px #dddce1;
+	margin-top: 10px;
+}
+.nav ul{
+	width: 100%;
+	height: auto;
+}
+.nav li{
+	width: 25%;
+	float: left;
+	list-style: none;
+	text-align: center;
+}
+.nav li a{
+	text-decoration: none;
+	display: block;
+	color: #606060;
+	padding-top: 6px;
+}
+.nav li a img{
+	height: 24px;
+	height: 24px;
+}
+.nav li a p{
+	font-size: 8px;
+}
+.nav li a:hover{
+	background-color: green;
+	width: 100%;
+	height: 56px;
+	margin-top: -3px;
+	color: white;
+	box-shadow: 0 0 5px 5px #dddce1;
+}
+.img1{
+	background:url(../img/btn-icon1@2x.png) no-repeat;
+	background-size: 24px 24px;
+	height: 24px;
+	width: 24px;
+}
+.img2{
+	background:url(../img/btn-icon2@2x.png) no-repeat;
+	background-size: 24px 24px;
+	height: 24px;
+	width: 24px;
+}
+.img3{
+	background:url(../img/btn-icon3@3x.png) no-repeat;
+	background-size: 24px 24px;
+	height: 24px;
+	width: 24px;
+}
+.img4{
+	background:url(../img/btn-icon4@3x.png) no-repeat;
+	background-size: 24px 24px;
+	height: 24px;
+	width: 24px;
+}
+.box{
+	margin-top: 10px;
+	width: 90%;
+	height: 100px;
+	box-shadow: 0 0 5px 5px #dddce1;
+}
+.box h1{
+	font-size: 16px;
+	color: #717171;
+	margin-left: 24px;
+	margin-top: 14px;
+	float: left;
+}
+.box a{
+	text-decoration: none;
+	color: #29a357;
+	font-size: 8px;
+	float: right;
+	margin-right: 11px;
+	text-align: left;
+	margin-top: 11px;
+}
+.box div{
+	width: 100%;
+	height: auto;
+	padding-top: 32px;
+	clear: both;
+}
+.box div .left1{
+	float: left;
+	font-size: 8px;
+	color: #b9b9b9;
+	margin-left: 24px;
+}
+.box div .left1 span{
+	padding-right: 9px;
+}
+.box div .right1{
+	float: right;
+	font-size: 8px;
+	color: #b9b9b9;
+	margin-right: 24px;
+}
+.box div .right1 span{
+	padding-right: 9px;
+}
+	.active
+{
+	border-bottom: 4px solid green;
+}
+#div2{
+	margin-top: 12px;
+}
+.div2
+{
+	width:100%;
+	height:100%;  
+	display:none;
+}
+#div1{
+	width: 100%;
+	height: 44px;
+	box-shadow: 0 0 5px 5px #dddce1;
+	text-align: center;
+	padding-left: 10%;
+	margin-top: 10px;
+}
+#div1 div{
+	width: 20%;
+	height: 100%;
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+	color: #717171;
+	line-height: 44px;
+	float: left;
+}
+.a1{
+	width: 100%;
+	box-shadow: 0 0 5px 5px #dddce1;
+    padding-left: 5%;
+	margin-top: 20px;
+	display: block;
+	text-decoration: none;
+	background-color: white;
+	height: 105px;
+}
+.a1 img{
+	float: left;
+	width: 131px;
+	height: 105px;
+	
+}
+.float1{
+	float: left;
+    height: 100%;
+    width: 210px;
+    padding-left: 10px;
+    padding-top: 12px;
+}
+.float1 p{
+	font-size: 12px;
+	color: #505050;
+	line-height: 18px;
+}
+.float1 .left2{
+	float: left;
+	width: 122px;
+	font-size: 10px;
+	color: #a5a5a5;
+	text-align: left;
+}
+.float1 span{
+	padding-right: 10px;
+}
+.float1 .right2{
+	float: left;
+	width: 75px;
+	font-size: 10px;
+	text-align: left;
+	color: #a5a5a5;
+}
+.float1  span{
+	padding-right: 4px;
+}
+.one{
+	margin-left: 10%;
+	float: left;
+}
+.two{
+	margin-right: 10%;
+	float: right;
+}
+.pageone{
+	width: 85%;
+	height: 170px;
+	box-shadow: 0 0 5px 5px #dddce1;
+	background-color: white;
+	    margin-top: 10px;
+}
+.a2{
+	width: 100%;
+	display: block;
+}
+.a2 img{
+	width: 100%;
+	height: auto;
+}
+.second{
+	float: left;
+	width: 50%;
+	height: auto;
+}
+.line{
+	width: 100%;
+	color: #b8b8b8;
+	    padding-top: 4px;
+	    padding-left: 6px;
+}
+.line span{
+	float: left;
+	width: 44px;
+}
+.line span img{
+	width: 11px;
+	float: left;
+	height: 9px;
+	margin-top:4px; 
+}
+.line span p{
+	font-size: 12px;
+	padding-left: 2px;
+}
+.details{
+	width: 100%;
+	padding-left: 3px;
+}
+.details a {
+	clear: both;
+	float: left;
+	display: block;	
+}
+.details a img{
+	width: 20px;
+	height: 20px;
+}
+.let{
+	float: left;
+	    padding-left: 10px;
+}
+.let p{
+	color: #c6c6c6;
+	font-size: 12px;
+	    margin-bottom: -4px;
+}
+.let i{
+	font-style: normal;
+	font-size: 12px;
+}

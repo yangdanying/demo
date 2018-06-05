@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>成绩查询</title>
+    <meta charset="UTF-8">
+    <meta name ="viewport" content ="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link href="../resources/css/scorequery.css" rel="stylesheet"/>
+</head>
+	<body>
+
+        <header class="like">
+            <a href="javascript:history.go(-1)" class="pong"><img class="pic" src="../resources/img/back@2x.png"/></a>
+            <h1 class="list">成绩查询</h1>
+            <h2 class="list1">Score query</h2>
+        </header>
+        <div class="zhanwei"></div>
+        <div class="touming" id="oDiv"></div>
+        <div class="touming2" id="oDiv1"></div>
+        <div class="picture">
+            <img src="../resources/img/image1.png (2).png" id="img"><br>
+            <a href="javascript:;" id="text">点击预览</a>
+        </div>
+        <div class="all">
+            <div class="content">
+                <div class="box9">
+                    <div class="left">
+                        <h1>打印章节</h1>
+                        <h2>Print Section</h2>
+                    </div>
+                    <div class="right" style='position:relative;'>
+                        <p id="text1" style="text-align: left;">全部</p><img src="../resources/img/list-png@2x.png" id="arrow" style="position: absolute;
+    width: 15px;
+    right: 0px;
+    top: 7px;">
+                    </div>
+                </div>
+                <div class="box9">
+                    <div class="left">
+                        <h1>打印数目</h1>
+                        <h2>Print Number</h2>
+                    </div>
+                    <div class="right">
+                        <p>1份</p>
+                    </div>
+                </div>
+                <div class="box9">
+                    <div class="left">
+                        <h1>金额</h1>
+                        <h2>Money</h2>
+                    </div>
+                    <div class="right">
+                        <p>0.1元</p>
+                    </div>
+                </div>
+            </div>
+           <a href="#"> <input type="submit" name="" value="打印" class="button" id="sub"></a>
+        </div>
+        <!-- <input type="submit" name="" value="检索" class="submit1"> -->
+    <div class="box" id="box1">
+        <div class="details">
+            <a href="scorequery.html"><img src="../resources/img/no.png@2x.png" class="one"></a>
+            <h1>254 658</h1>
+            <h2>提取码</h2>
+            <hr/>
+            <p class="three">可以自助打印机输入提取码<br/>提取文件</p>
+            <div class="footer">
+                <p>扫码支付</p>
+                <img src="../resources/img/imageer.png@2x.png" class="two">
+            </div>
+        </div>
+    </div>
+    <div id="parcel">
+        <ul>
+            <li><a href="javascript:;" class="a">当前</a></li>
+            <li><a href="javascript:;" class="active">全部</a></li>
+        </ul>
+    </div>
+    <div id="box0">
+        <img src="../resources/img/image1.png (2).png">
+    </div>
+    </body>
+
+    <script type="text/javascript">
+    window.onload=function(){
+        var oSub=document.getElementById('sub');
+        oSub.onclick=function(){
+            var oBox=document.getElementById('box1');
+            var oDiv=document.getElementById('oDiv');
+            oDiv.style.display='block';
+            oBox.style.display='block';
+        };
+        var oText=document.getElementById('text');
+        var oImg=document.getElementById('img');
+        var oBox1=document.getElementById('box0');
+        var oDiv1=document.getElementById('oDiv1');
+        oText.onclick=function(){
+            oDiv1.style.display='block';
+            oBox1.style.display='block';
+        };
+        oImg.onclick=function(){
+            oDiv1.style.display='block';
+            oBox1.style.display='block';
+        };
+        oDiv1.onclick=function(){
+            oDiv1.style.display='none';
+            oBox1.style.display='none';            
+        };
+        var oArrow=document.getElementById('arrow');
+        var oPack=document.getElementById('parcel');
+        var aLi=oPack.getElementsByTagName('li');
+        var aA=oPack.getElementsByTagName('a');
+        var oText1=document.getElementById('text1');
+        oArrow.onclick=function(){
+            oPack.style.display='block';
+            for(var i=0;i<aA.length;i++){
+                aA[i].index=i;
+                aA[i].onclick=function(){
+                window.local_count = window.localStorage.getItem('COUNT')==0; //计数
+                window.localStorage.setItem('COUNT', local_count++);
+                if(local_count %2==1)
+                {
+                    for(var i=0;i<aA.length;i++){
+                       aA[i].className="a";
+                    }
+                    this.className="active";
+                } else{
+                    oText1.innerHTML=this.text+'&nbsp;';
+                    oPack.style.display="none";
+                    window.localStorage.removeItem('COUNT');
+                    };
+                };
+            };
+        };
+    };
+</script>
+</html>

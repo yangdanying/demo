@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+ }
+ a,a:link,a:visited,a:hover,a:active{
+    text-decoration:none;
+    color: #000;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);/*去掉点击时背景色改变的效果*/
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color:#fefdfd ;
+}
+header.like{
+    position: fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:39.8%;
+    margin:0 auto;
+    background-color:#454253;
+}
+header .like a{
+    display: inline-block;
+}
+.pong{
+    position: relative;
+    top: 17px;
+    left:18px;
+    width:18px;
+    height:26px;
+}
+header.like .pic{
+    position:block;
+    width:18px;
+    height:26px;
+    margin:0 auto;
+}
+.list{
+    text-align: center;
+    font-size: 18px;
+    color:#ffffff;
+    margin-top: -17.4px;
+    font-family:冬青黑中文简体;
+    
+}
+.list1{
+    text-align:center;
+    font-size: 10px;
+    font-weight:normal;
+    color:#ffffff;
+    font-family:冬青黑中文简体;
+}
+.zhanwei{
+    width:100%;
+    height:39.8%;
+    margin:0 auto;
+}
+
+.include{
+	position: fixed;
+    top: 99px;
+    left: 15.2%;
+	width: 69.3%;
+	height: 400px;
+	background-color: white;
+	border-radius: 15px;
+	box-shadow: 0px 0px 18px #666666;
+}
+.include1{
+	width: 100%;
+	height: 98%;
+}
+.xin{
+    position: absolute;
+    width: 27px;
+    height: 23px;
+    top: 15px;
+    right: 15px;
+
+}
+.rgb{
+	text-align: center;
+	padding-top: 30px;
+}
+.Manager{
+	color: black;
+	font-family: 冬青黑中文简体;
+	line-height: 15px;
+
+}
+.Manager h1{
+	font-size: 18px;
+	letter-spacing:3px;
+}
+.Manager h2{
+	font-size: 10px;
+	font-weight: normal;
+}
+.Manager1{
+	font-size:11px;
+	color: #898989;
+	font-family: 冬青黑中文简体;
+	letter-spacing:1px;
+	padding-top:12px;
+}
+.jieshu{
+	 padding-top: 10px;
+}
+hr{
+    margin: 0 auto;
+    background-color:black;
+    width: 21.6%;
+    height:1.2px;
+    border-style: none;
+    margin-top:24px;
+}
+.ten_yun{
+	font-size:26px;
+	color: #38b268;
+	font-family: 冬青黑中文简体;
+	text-align: center;
+	letter-spacing: 1px;
+	margin-top: 17px;
+}
+.Manager2{
+	color: #313131;
+	font-family: 冬青黑中文简体;
+	text-align: center;
+	letter-spacing: 1px;
+	margin-top:35px;
+	line-height:25px;
+}
+.Manager2 h1{
+	font-size:18px;
+}
+.Manager2 h2{
+	font-size:14px;
+}
+.weiman{
+	font-size: 10px;
+	font-family: 冬青黑中文简体;
+	text-align: center;
+	letter-spacing: 1px;
+	margin-top: 28px;
+	color: #f54e56;
+}
+.zhyh{
+	height: 17px;
+    width: 100%;
+	font-size: 10px;
+	font-family: 冬青黑中文简体;
+	text-align: center;
+	margin-top: 37px;
+	color: #959595;
+}
+.joo{
+	float: left;
+	margin-left:15px;
+}
+.jooo{
+	float: right;
+	margin-right:20px;
+}
+.submit{
+	background-color: #38b268;
+	border-radius: 25px 25px 25px 25px;
+	border:none;
+	width: 90px;
+	height:35px;
+	color:#ffffff;
+	font-size: 16px;
+	font-family:冬青黑中文简体;
+	letter-spacing: 10px;
+    padding-left: 11px;
+
+}
+button:focus{
+    outline: none;
+}
+.container {
+    width: 100%;
+    height: 42px;
+    text-align: center;
+    margin-top: 291px;
+}
+
+#myModel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display:none;
+    background-color: rgba(9, 9, 9, 0.63);
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+       }
+
+.model-content {
+	position: relative;
+    width: 69%;
+    height: 211px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 15px;
+    margin: 173px auto;
+    line-height: 23px;
+    z-index: 1001;
+        }
+#closeModel{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+        }
+.picture{
+    width: 60px;
+    height: 60px;
+    margin-top:13px;
+    text-align:center;
+}
+.print{
+	font-family: 冬青黑中文简体;
+    margin-top: 10px;
+}
+.h1{
+    font-size: 24px;
+    color: #38b268;
+    letter-spacing: 3px;
+    font-weight: bold
+}
+.h2{
+    font-size: 14px;
+    color: #898989;
+    margin-top: 49px;
+}
+

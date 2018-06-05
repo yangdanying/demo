@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>学费</title>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../resources/css/xuefei.css">
+    <script type="text/javascript" src="../resources/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../resources/js/xuefei.js"></script>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <a href="javascript:history.go(-1)"><img src="../resources/img/back@2x.png"></a>
+            <p class="h1">查询缴费</p>
+            <p class="h2">Query payment</p></br>
+        </div>
+        <div class="ten">
+            <p class="l1">20000.0<span >元</span></p>
+            <p class="l2">学费总金额</p>
+            <p class="l3">已支付</p>
+        </div>
+    </header>
+    <div class="banana">
+        <div class="black"> 
+            <p class="b1">缴费项目</p>
+            <p class="b2">Payment Item</p><br/>
+            <p class="b3"><span href="javascript:;" id="cost">学费&nbsp;</span><a href="#" id="a2"><img src="../resources/img/list-png@2x.png"></a></p>
+        </div>
+        <div id="div2">
+            <ul>
+                <li><a class="a1" href="javascript:;" id="close">网费</a></li>
+                <li><a class="a1" href="javascript:;">学费</a></li>
+                <li><a class="active" href="payment.html">电费</a></li>
+                <li><a class="a1" href="dengjikaoshifei.html">等级考试费</a></li>
+            </ul>
+        </div>
+        <div class="red"> 
+            <p class="b1">缴费金额</p>
+            <p class="b2">Payment Amount</p><br/>
+        </div>
+        <hr>
+        <div class="white">
+            <p>详情</p>
+        </div>
+        <div class="text">
+            <h1>学费</h1>
+            <h2>18000元</h2></br>
+            <h1>住宿费</h1>
+            <h2>2000元</h2></br>
+            <h1>共计</h1>
+            <span>20000元</span>
+        </div>
+        <div class="end">
+            <a href="zhifuchenggong.html"><p>支  付</p></a>
+        </div>
+    </div>
+    <div class="mask"></div>
+    <div class="info">
+        <h2><img src="../resources/img/addressList/close.png" alt="" id="btn"></h2>
+        <p>该功能尚未开放</p>
+    </div>
+    <script type="text/javascript">
+        $('#close').click(function(){
+            $('.mask').css('display','block');
+            $('.info').css('display','block');
+        });
+        $('#btn').click(function(){
+            $('.mask').css('display','none');
+            $('.info').css('display','none');
+        });
+    </script>
+</body>
+
+</html>

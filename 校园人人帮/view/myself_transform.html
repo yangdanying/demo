@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>个人中心</title>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../resources/css/myself_transform.css">
+    <script src="../resources/js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<header>
+		<div class="head">
+			<a href="home.html"><img class="arrow" src="../resources/img/back@2x.png"></a>
+			<h1>个人中心</h1>
+			<h2>Personal</h2>
+		</div>
+	</header>
+		<img src="../resources/img/bg.png" class="flower">
+	<div class="act">
+		<div class="one">
+			<img src="../resources/img/touxiang.png@2x.png">
+			<h1></h1>
+			<h2>虚拟现实学院</h2>
+		</div>
+		<div class="three">
+			<a href="collect_transform.html"><p>我的收藏</p><img src="../resources/img/youjian.png@2x.png"></a>
+		</div>
+		<div class="two">
+			<a href="new_transform.html"><p>我的消息</p><img src="../resources/img/youjian.png@2x.png"></a>
+		</div>
+		<div class="two">
+			<a href="works_transform.html"><p>我的作品</p><img src="../resources/img/youjian.png@2x.png"></a>
+		</div>
+	</div>
+	<script>
+	window.onload = function(){
+		$('.one h1').html(localStorage.getItem('user'));
+	}
+	</script>
+</body>
+</html>

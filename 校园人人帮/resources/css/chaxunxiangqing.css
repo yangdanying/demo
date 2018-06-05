@@ -1,0 +1,110 @@
+*{
+ 	margin: 0;
+ 	padding: 0;
+ }
+a,a:link,a:visited,a:hover,a:active{
+	text-decoration:none;
+	color: #000;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);/*去掉点击时背景色改变的效果*/
+}
+div{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);/*去掉点击时背景色改变的效果*/
+}
+  html,body{
+ 	height: 100%;
+ 	width: 100%;
+    background-color:#fefdfd ;
+}
+header.like{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:60px;
+    margin:0 auto;
+    background-color:#454253;
+}
+header .like a{
+    display: inline-block;
+}
+.pong{
+    position: relative;
+    top: 17px;
+    left:18px;
+    width:18px;
+    height:26px;
+}
+header.like .pic{
+    width:18px;
+    height:26px;
+    margin:0 auto;
+}
+.list{
+	text-align: center;
+	font-size: 18px;
+	color:#ffffff;
+	margin-top: -17.4px;
+	font-family:冬青黑中文简体;
+	
+}
+.list1{
+	text-align:center;
+	font-size: 10px;
+	font-weight:normal;
+	color:#ffffff;
+	font-family:冬青黑中文简体;
+}
+.zhanwei{
+	width:100%;
+	height:60px;
+	margin:0 auto;
+}
+
+.hao{
+	width: 94.1%;
+    height: 85%;
+    background-color: #ffffff;
+    margin:0 auto;
+    margin-top: 17px;
+    border-radius: 10px ;
+    box-shadow: 0 0 10px #cccccc;
+}
+.hao1{
+	text-align: center;
+	padding-top:22px;
+	font-size: 25px;
+	color: #313131;
+	letter-spacing: 3px;
+	font-family:冬青黑中文简体;
+}
+.hao2{
+	width: 93%;
+    position: relative;
+    top: 21px;
+    left: 20px;
+    font-size: 15px;
+    color: #898989;
+    font-family: 冬青黑中文简体;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+.hao2 span{
+	font-size: 17px;
+}
+.wc{
+	text-align: center;
+}
+.wancheng{
+    margin-top: 65px;
+    border-radius: 15px;
+    background-color: #38b268;
+    border: none;
+    width: 83px;
+    height: 55px;
+    color: #ffffff;
+    font-size: 23px;
+    font-family: 冬青黑中文简体；
+}
+input:focus{
+	outline: none;
+}

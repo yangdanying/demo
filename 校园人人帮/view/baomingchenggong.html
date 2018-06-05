@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>勤工俭学</title>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <link href="../resources/css/baomingchenggong.css" rel="stylesheet"/>
+</head>
+<body>
+    <header class="like">
+        <a href="javascript:history.go(-1)" class="pong"><img class="pic" src="../resources/img/back@2x.png"/></a>
+        <h1 class="list">勤工俭学</h1>
+        <h2 class="list1">Study under a work-study programme</h2>
+    </header>
+    <div class="zhanwei"></div>
+    <div class="include">
+        <div class="include1">
+            <img class="xin"  src="../resources/img/collect@1x.png"/>
+            <div class="rgb">
+                <div class="Manager">
+                    <h1>理书员</h1>
+                    <h2>Book Manager</h2>
+                </div>
+                <div class="Manager1">
+                    <p>主要负责图书馆的图书整理分类<br/>图书租借记录等</p>
+                    <p class="jieshu">(可在工作休闲时期，借阅图书馆图书)</p>
+                </div>
+                <hr/>
+                <p class="ten_yun">￥10元/时</p>
+                <div class="Manager2">
+                    <h1>招2人/大二学生</h1>
+                    <h2>地点：图书馆一楼</h2>
+                </div>
+                <p class="weiman">未满</p>
+            </div>
+            <div class="zhyh">
+                <p class="joo">发布时间  2017-04-02</p>
+                <p class="jooo">浏览人数  30</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <button class="submit" onclick="showModel()">报名</button>
+        <div id="myModel" onclick="closeModel()">
+            <div class="model-content">
+                <p>
+                    <input type="image"  id="closeModel" onclick="closeModel()" src="../resources/img/no.png@2x.png"/>
+                </p>
+                <p><img class="picture" src="../resources/img/icon-png@2x.png"/></p>
+                <div class="print">
+                    <p class="h1">报名成功</p>
+                    <p class="h2">三天之内如未报道将自动取消</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../resources/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        function showModel(){
+            document.getElementById('myModel').style.display = 'block';
+        };
+        function closeModel(){
+            document.getElementById('myModel').style.display = 'none';
+        };
+        $(document).ready(function(){
+            var x=0;
+            $("img.xin").click(function(){
+                if(x==0){
+                    x=1;
+                    a();
+                }else if(x==1){
+                    x=0;
+                    b();
+                };
+            });
+            function a(){
+                $("img.xin").attr('src','../resources/img/collect@1x.png')
+            };
+            function b(){
+                $("img.xin").attr('src','../resources/img/collect@2x.png')
+            };
+        });
+    </script>
+</body>
+<html>

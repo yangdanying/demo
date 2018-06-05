@@ -1,0 +1,175 @@
+*{
+	margin: 0 auto;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+html {font-size: 625%;/* 100 ÷ 16 × 100% = 625%*/}
+@media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait) {
+    html { font-size: 703%; }
+}
+@media screen and (min-width:375px) and (max-width:383px) and (orientation:portrait) {
+    html { font-size: 732.4%; }
+}
+@media screen and (min-width:384px) and (max-width:399px) and (orientation:portrait) {
+    html { font-size: 750%; }
+}
+@media screen and (min-width:400px) and (max-width:413px) and (orientation:portrait) {
+    html { font-size: 781.25%; }
+}
+@media screen and (min-width:414px) and (max-width:431px) and (orientation:portrait){
+    html { font-size: 808.6%; }
+}
+@media screen and (min-width:432px) and (max-width:479px) and (orientation:portrait){
+    html { font-size: 843.75%; }
+}
+body{
+	position: relative;
+	height: 5.6919rem;
+	background-color: #f7f8fd;
+}
+@font-face{
+	font-family: "dong";
+	src:url('../font/冬青黑体W3.otf');
+}
+a,a:link,a:visited,a:hover,a:active{
+	text-decoration:none;
+	color: #000;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);/*去掉点击时背景色改变的效果*/
+}
+div{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);/*去掉点击时背景色改变的效果*/
+}
+header{
+	height: 0.5121rem;
+	width: 100%;
+	background:#454253;
+	color: white;
+	position: fixed;
+	z-index: 10;
+}
+header .head {
+	background: transparent;
+	padding-top: 0.0990rem;
+}
+header .head .arrow{
+	width: 0.1536rem;
+	height: 0.2219rem;
+	left: 0.1536rem;
+	bottom: 0.145071rem;
+	background: transparent;
+	position: absolute;
+}
+header .head h1{
+	text-align: center;
+	font-size:  0.1536rem;;
+	background: transparent;
+	clear: both;
+}
+header .head h2{
+	text-align: center;
+	font-size: 0.0854rem;
+	font-weight: normal;
+	background: transparent;
+	clear: both;
+}
+.garbage_can{
+	position: absolute;
+	background: transparent;
+	height: 0.2134rem;
+    width: 0.2134rem;
+    bottom: 0.165071rem; 
+    right: 0.1536rem;
+}
+.content{
+	width: 100%;
+	height: auto;
+	padding-top: 0.1707rem;
+}
+.zhanwei{
+	height: 0.5121rem;
+	width: 100%;
+}
+.details{
+	width: 92%;
+	height: 3.0721rem;
+}
+.box{
+	height: 100%;
+    width: 48%;
+    background: #ffffff;
+    border-style: none;
+    box-shadow: 0.0084rem 0.0084rem 0.0854rem #aaaaaa;
+    float: left;
+    position: relative;
+}
+.box2{
+	height: 100%;
+    width: 48%;
+    background: #ffffff;
+    border-style: none;
+    box-shadow: 0.0084rem 0.0084rem 0.0854rem #aaaaaa;
+    float: right;
+    position: relative;
+}
+.box2 img,.box img{
+	width: 100%;
+	height: 67%;
+}
+.box2 p,.box p{
+	font-size: 0.1024rem;
+    color: #535353;
+    margin-left: 0.0939rem;
+    margin-top: -0.0854rem;
+}
+.remark{
+	width: 100%;
+	height: auto;
+}
+.row{
+	margin-top: 0.1366rem;
+	margin-left: 0.0939rem;
+    color: #bebebe;
+    font-size: 0.0939rem;
+    letter-spacing: 0.0084rem;
+    float: left;
+}
+.row span{
+	float: left;
+	padding-right: 0.0854rem;
+}
+.row span img{
+	height: 0.0854rem;
+    width: 0.1366rem;
+}
+.row span i{
+	font-style: normal;
+	padding-left: 0.0342rem;
+}
+.row2{
+	position: absolute;
+	bottom: 0rem;
+	left: 0.0939rem;
+    height: 0.3414rem;
+}
+.row2 img{
+	height: 0.2816rem;
+    width: 0.2816rem;
+    float: left;
+}
+.row2 .id{
+	float: left;
+	text-align: left;
+	height: 0.2816rem;
+}
+.row2 .id .p1{
+	font-size: 0.0854rem;
+    color: #bebebe;
+    letter-spacing: 0.0084rem;
+    padding-top: 0.0854rem;
+}
+.row2 .id .p2{
+    font-size: 0.0768rem;
+    color: #535353;
+    letter-spacing: 0.0043rem;
+    padding-top: 0.0854rem;
+}

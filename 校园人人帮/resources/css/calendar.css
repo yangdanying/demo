@@ -1,0 +1,642 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: "微软雅黑";
+}
+/*@font-face{
+	font-family: "dong";
+	src:url('../font/冬青黑体W3.otf');
+}*/
+a,a:link,a:visited,a:hover,a:active{
+	text-decoration:none;
+	color: #000;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);/*去掉点击时背景色改变的效果*/
+}
+div{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);/*去掉点击时背景色改变的效果*/
+}
+input:focus{
+	outline: none;
+}
+html{
+	font-size: 10px;
+}
+body{
+	position: relative;
+	/*background-color: #454253;*/
+}
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 5rem;
+	color: #fff;
+	background-color: #454253;
+}
+header .head{
+	width: 100%;
+	height: 5rem;
+	margin: 0 auto;
+	background-color: #454253;
+	position: relative;
+}
+header .head a{
+	display: inline-block;
+}
+header .head a.back{
+	position: relative;
+	top: 1.42rem;
+	left: 1.5rem;
+	width: 1.55rem;
+	height: 2.17rem;
+}
+header .head a.back img{
+	display: block;
+	width: 1.5rem;
+	height: 2.17rem;
+	margin: 0 auto;
+}
+header .head a.calendar{
+	position: absolute;
+	top: -2.8rem;
+	right: 1.5rem;
+	width: 2.5rem;
+	height: 2.5rem;
+	text-align: center;
+}
+header .head a.calendar img{
+	width: 2.5rem;
+	height: 2.5rem;
+}
+header .head p{
+	display: inline-block;
+	position: absolute;
+	top: 3.2rem;
+	left: 50%;
+	width: 15rem;
+	height: 1rem;
+	margin-left: -7.5rem;
+	line-height: 1rem;
+	text-align: center;
+}
+header .head p:first-of-type{
+	top: 0.7rem;
+	height: 3.1rem;
+	line-height: 2.5rem;
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+/*日历区*/
+.calendar{
+	width: 100%;
+	height: 19.5rem;
+	margin-top: 4rem;
+	background:#454253;
+	color: #fff;
+	box-shadow: 0rem 0rem 2rem 0.5rem #555;
+}
+.calendar .box{
+	width: 92%;
+	height: 10rem;
+	margin: 0 auto;
+	padding-top: 3.5rem;
+	background-color: transparent;
+}
+.calendar .box .left{
+	float: left;
+	width: 30%;
+	height: 10rem;
+	margin-top: 2rem;
+	background: transparent;
+}
+.calendar .box .left .date{
+	width: 7rem;
+	height: 7rem;
+	margin: 0 auto;
+	border-radius: 50%;
+	background-color:#f54e56;
+	color: #fff;
+}
+.calendar .box .left .date h1{
+	padding-top: 1rem;
+	font-size: 3rem;
+	text-align: center;
+	font-weight: normal;
+}
+.calendar .box .left .date p{
+	margin-top: 0.2rem;
+	font-size: 1rem;
+	text-align: center;
+}
+.calendar .box .left p{
+	margin-top: 1rem;
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+}
+.calendar .box .right{
+	float: right;
+	width: 65%;
+	height: 100%;
+}
+.calendar .box .right ul.titleLine{
+	width: 100%;
+	height: 1.5rem;
+}
+.calendar .box .right ul.titleLine li{
+	float: left;
+	width: 2.5rem;
+	line-height: 1.5rem;
+	text-align: center;
+}
+.calendar .box .right ul#dateChose{
+	display: block;
+	width: 100%;
+	height: 14rem;
+}
+.calendar .box .right ul#dateChose li{
+	float: left;
+	width: 2.5rem;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	text-align: center;
+}
+@media screen and (max-width: 320px){
+	.calendar .box .right ul.titleLine{
+		height: 1.5rem;
+	}
+	.calendar .box .right ul.titleLine li{
+		width: 2.2rem;
+		line-height: 1.5rem;
+	}
+	.calendar .box .right ul#dateChose{
+		height: 13rem;
+	}
+	.calendar .box .right ul#dateChose li{
+		width: 2.2rem;
+		height: 2.2rem;
+		line-height: 2.2rem;
+	}
+}
+@media screen and (min-width: 412px){
+	.calendar{
+		height: 22.5rem;
+	}
+	.calendar .box{
+		height: 16rem;
+	}
+	.calendar .box .left{
+		height: 12rem;
+	}
+	.calendar .box .left .date{
+		width: 8rem;
+		height: 8rem;
+	}
+	.calendar .box .left .date h1{
+		padding-top: 1.5rem;
+		font-size: 3rem;
+	}
+	.calendar .box .left .date p{
+		margin-top: 0.2rem;
+		font-size: 1rem;
+	}
+	.calendar .box .right ul.titleLine li{
+		width: 2.8rem;
+		line-height: 1.5rem;
+	}
+	.calendar .box .right ul#dateChose{
+		height: 15rem;
+	}
+	.calendar .box .right ul#dateChose li{
+		width: 2.8rem;
+		height: 2.8rem;
+		line-height: 2.8rem;
+	}
+}
+.calendar .box .active{
+	background-color: white;
+	color: #f54e56;
+	border-radius:50%; 
+}
+/*日历区结束*/
+/*中间部分*/
+.kebiao{
+	width: 90%;
+	height: 8.5rem;
+	margin: 2.5rem auto 0;
+	box-shadow: 0 0 10px #c0c0c0;
+	position: relative;
+	color: #535353;
+}
+.kebiao .box{
+	width: 90%;
+	height: 100%;
+	margin: 0 auto;
+	font-weight: bold;
+}
+.kebiao .box .left{
+	float: left;
+	width: 20%;
+	padding-top: 1.5rem;
+	text-align: center;
+}
+.kebiao .box .left span{
+	display: block;
+	height: 1rem;
+	line-height: 1rem;
+	font-size:1rem;	
+}
+.kebiao .box .left span img{
+	width: 0.8rem;
+	height: 0.8rem;
+	margin-right: 0.5rem;
+}
+.kebiao .box .line{
+	display: inline-block;
+	width: 1px;
+	height: 6.5rem;
+	margin: 1rem 0 0 1rem;
+	border-left: 1px solid #999;
+}
+.kebiao .box .right{
+	float: right;
+	width: 70%;
+	padding-top: 1.5rem;
+	background: url(../img/calendar/pic-map.png) no-repeat;
+	background-position: 8rem 1.5rem;
+	background-size: 10rem 6rem;
+}
+.kebiao .box .right p{
+	font-size: 1rem;
+	line-height: 1.6rem;
+}
+.kebiao .box .right p img{
+	width: 1rem;
+	height: 1rem;
+}
+.kebiao .box .m{
+	margin-top: -5px;
+}
+/*中间区结束*/
+/*安排区*/
+.reminder{
+	width: 90%;
+	margin: 1.5rem auto 1rem;
+	box-shadow: 0 0 10px #c0c0c0;
+}
+.reminder h1{
+	width: 90%;
+	margin: 0 auto;
+	font-size: 14px;
+	color: #535353;
+	padding: 1rem 0 0.5rem;
+}
+.reminder ul{
+	width: 90%;
+	margin: 0 auto;
+}
+.reminder ul li{
+	width: 100%;
+	height: 5rem;
+	border-bottom: 1px solid #bfbfbf;
+	position: relative;
+}
+.reminder ul li div.left{
+	float: left;
+	width: 65%;
+	height: 100%;
+}
+.reminder ul li div.left span{
+	display: inline-block;
+	margin-top: 0.5rem;
+	margin-right: 1rem;
+}
+.reminder ul li div.right{
+	float: right;
+	width: 35%;
+	height: 100%;
+	text-align: center;
+}
+.reminder ul li div.right span{
+	display: block;
+	float: left;
+	width: 40%;
+	margin-top: 2.4rem;
+}
+.reminder ul li div.right span:first-of-type{
+	width: 60%;
+	height: 100%;
+	line-height: 5rem;
+	font-size: 3rem;
+	margin: 0;
+}
+.reminder ul li .greenLine{
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: -0.5rem;
+	width: 0.5rem;
+	height: 4rem;
+	margin-top: -2rem;
+	background-color: #40bb6b;
+}
+@media screen and (max-width: 320px){
+	.reminder{
+		height: 22rem;
+	}
+	.reminder ul li{
+		height: 6rem;
+	}
+	.reminder ul li .greenLine{
+		height: 5rem;
+		margin-top: -2.5rem;
+	}
+}
+/*安排区结束*/
+/*右下按钮*/
+.add{
+	position: fixed;
+	bottom: 1rem;
+	right: 1.5rem;
+	widows: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem #9b9b9b;
+/*	z-index: 10;*/
+}
+.add img{
+	width: 4rem;
+	height: 4rem;
+}
+/*按钮区结束*/
+/*蒙板*/
+#mask{
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: #303032;
+	opacity: 0.9;
+	filter: Alpha(opacity = 9);
+	-moz-opacity: 0.9;
+	-khtml-opacity: 0.9;
+	z-index: 100;
+}
+/*弹出区*/
+.addPlan{
+	display: none;
+	position: absolute;
+	bottom: -1rem;
+	left: 0rem;
+	width: 100%;
+	height: 48.5rem;
+	border-top-left-radius: 1.5rem;
+	border-top-right-radius: 1.5rem;
+	background-color: #fff;
+	z-index: 200;
+}
+.addPlan .planTitle{
+	width: 95%;
+	height: 10rem;
+	margin: 1.5rem auto 0.5rem;
+	position: relative;
+}
+.addPlan .planTitle img{
+	position: absolute;
+	top: 0rem;
+	right: 0rem;
+	width: 2rem;
+	height: 2rem;
+}
+.addPlan .planTitle .box{
+	width: 90%;
+}
+.addPlan .planTitle .box span{
+	display: inline-block;
+	width: 4rem;
+	height: 2rem;
+	font-size: 1.5rem;
+	color: #7d7d7d;
+}
+.addPlan .planTitle .box input{
+	width: 95%;
+	height: 2rem;
+	line-height: 2rem;
+	border: none;
+	background-color: transparent;
+}
+.addPlan .planTitle .box input:focus{
+	outline: none;
+}
+.addPlan .planTitle .mapBtn{
+	width: 100%;
+	height: 1.5rem;
+	margin-top: 3px;
+	line-height: 1.5rem;
+	font-size: 1rem;
+	color: #40bb6b;
+}
+/*百度地图*/
+.addPlan .planTitle .map{
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 24rem;
+	height: 24rem;
+	margin-top: -12rem;
+	margin-left: -12rem;
+	border-radius: 15px;
+	z-index: 5 !important;
+}
+.addPlan .line{
+	width: 100%;
+	height: 5px;
+	background-color: #c9c9c9;
+}
+.addPlan .planTime{
+	width: 95%;
+	margin: 1.5rem auto 3rem;
+	position: relative;
+}
+.addPlan .planTime .count,.showHome{
+	width: 100%;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	font-size: 1.5rem;
+}
+.addPlan .planTime .count>span,.showHome>span{
+	display: inline-block;
+	margin-right: 1rem;
+	color: #7d7d7d;
+}
+.addPlan .planTime .track{
+	float: right;
+	width: 6rem;
+	height: 1rem;
+	margin: 0.25rem 0;
+	border-radius: 1.5rem;
+	background-color: #dcdcdc;
+	position: relative;
+}
+.addPlan .planTime .track .countBtn{
+	position: absolute;
+	top: -0.7rem;
+	left: 3rem;
+	width: 1rem;
+	height: 1rem;
+	border: 0.7rem solid #40bb6b;
+	border-radius: 50%;
+	background-color: #fff;
+	box-shadow: 0rem 0rem 0.1rem 0.1rem #9b9b9b;
+}
+.addPlan .planTime>ul{
+	width: 100%;
+	margin-top: 2.5rem;
+}
+.addPlan .planTime>ul li{
+	width: 100%;
+	height: 2rem;
+	margin-bottom: 1.5rem;
+	line-height: 2rem;
+}
+.addPlan .planTime>ul li>span{
+	display: inline-block;
+	margin-right: 1rem;
+	font-size: 1.5rem;
+	color: #7d7d7d;
+	text-align: center;
+}
+.addPlan .planTime>ul li .choose{
+	float: right;
+	width: 40%;
+	height: 100%;
+}
+.addPlan .planTime>ul li .choose2{
+	float: right;
+	width: 32%;
+	height: 100%;
+}
+.addPlan .planTime>ul li .choose>span,.choose2>span{
+	display: inline-block;
+	font-size: 1.5rem;
+	color: #7d7d7d;
+	text-align: center;
+}
+.addPlan .planTime>ul li .choose>input,.choose2>input{
+	width: 1.5rem;
+	/*height: 100%;*/
+	border: none;
+	font-size: 1.5rem;
+	color: #7d7d7d;
+	text-align: center;
+}
+.addPlan .planTime>ul li .choose>span:first-of-type,.mons,.days{
+	margin: 0rem 0.5rem;
+}
+.addPlan .planTime>ul li .choose2>#hour,#minute,#haleDay{
+	margin: 0rem 0.5rem;
+}
+.addPlan .planTime>ul li .choose2 input{
+	text-align: center;
+}
+/*时分输入区*/
+/*.addPlan .planTime .timeSwiper{
+	display: none;
+	position: absolute;
+	top: 7rem;
+	right: 1.5rem;
+	width: 9rem;
+	height: 8.5rem;
+	border-radius: 1.5rem;
+	background-color: #fff;
+	box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem #9b9b9b;
+	overflow: hidden;
+}
+.addPlan .planTime .timeSwiper .ihour,.iminute{
+	float: left;
+	width: 50%;
+	height: 3rem;
+	margin-top: 0.8rem;
+	color: #f54e56;
+	text-align: center;
+	font-size: 1.5rem;
+}*/
+/*重复次数*/
+.addPlan .planTime .times{
+	width: 100%;
+	height: 6rem;
+	margin-bottom: 2.5rem;
+}
+.addPlan .planTime .times>span{
+	display: inline-block;
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+	font-size: 1.5rem;
+	color: #7d7d7d;
+}
+.addPlan .planTime .times>div{
+	width: 100%;
+	height: 2rem;
+	margin-top: 0.75rem;
+	line-height: 2rem;
+}
+.addPlan .planTime .times>div span{
+	display: inline-block;
+	margin-right: 0.5rem;
+	padding: 0.2rem 0.4rem;
+	font-size: 1.5rem;
+	color: #000;
+}
+.addPlan .planTime .times .active{
+	color: #fff;
+	border-radius: 1.5rem;
+	background-color: #40bb6b;
+	box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem #9b9b9b;
+}
+@media screen and (max-width: 320px){
+	.addPlan{
+		height: 51.5rem;
+		bottom: 0rem;
+	}
+	.addPlan .planTime ul li .choose{
+		width: 47%;
+	}
+	.addPlan .planTime ul li .choose2{
+		width: 36%;
+	}
+	.addPlan .planTime .times>div span{
+		padding: 0rem;
+	}
+}
+@media screen and (min-width: 412px){
+	.addPlan{
+		height: 54rem;
+		bottom: -3.5rem;
+	}
+	.addPlan .planTime ul li .choose{
+		width: 37%;
+	}
+	.addPlan .planTime ul li .choose2{
+		width: 28%;
+	}
+	.addPlan .planTime .times>div span{
+		padding: 0.2rem 0.7rem;
+	}
+}
+.addPlan .planTime .addFin{
+	width: 4rem;
+	height: 4rem;
+	margin: 3rem auto 0rem;
+	border-radius: 50%;
+	box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem #9b9b9b;
+}
+.addPlan .planTime .addFin img{
+	width: 100%;
+	height: 100%;
+}
+/*弹出区结束*/

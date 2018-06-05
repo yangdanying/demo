@@ -1,0 +1,623 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a,a:link,a:visited,a:hover,a:active{
+	text-decoration:none;
+	color: #000;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);/*去掉点击时背景色改变的效果*/
+}
+div{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);/*去掉点击时背景色改变的效果*/
+}
+html{
+	font-size: 10px;
+}
+body{
+	background-color: #22252c;
+}
+/*头部区*/
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 3.5rem;
+}
+header div{
+	width: 95%;
+	height: 95%;
+	margin: 2.5% auto 0;
+}
+header div i{
+	display: inline-block;
+	width: 2.5rem;
+	height: 2.5rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 90%;
+}
+header div i#icon1{
+	float: left;
+	background-image: url(../img/home/menu.png);
+}
+header div i#icon2{
+	float: right;
+	background-image: url(../img/home/forfile.png);
+}
+/*左上角菜单区*/
+.mask{   /*蒙板*/
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: #303032;
+	opacity: 0.9;
+	filter: Alpha(opacity = 9);
+	-moz-opacity: 0.9;
+	-khtml-opacity: 0.9;
+	z-index: 100;
+}
+.menu{
+	display: none;
+	position: absolute;
+	top: 4rem;
+	left: 50%;
+	width: 30rem;
+	/*height: 33.5rem;*/
+	margin-left: -15rem;
+	border-radius: 2rem;
+	background-color: #fff;
+	z-index: 1000;
+}
+.menu div.closeBtn{
+	width: 100%;
+	height: 2.2rem;
+	margin: 1.5rem 0;
+	line-height: 2.2rem;
+}
+.menu div.closeBtn img{
+	float: right;
+	width: 2rem;
+	height: 2rem;
+	margin-top: 0.1rem;
+	margin-right: 1.5rem;
+}
+.menu a{
+	display: block;
+	float: left;
+	width: 33.3%;
+	height: 6.5rem;
+	margin-bottom: 3.5rem;
+	text-align: center;
+}
+.menu a img{
+	width: 3rem;
+	height: 3rem;
+}
+.menu a span{
+	display: block;
+}
+/*菜单区结束*/
+
+/*计时区*/
+#content{
+	width: 100%;
+}
+.clock{
+	width: 83%;
+	height: 18rem;
+	margin: 9.5rem auto 4rem;
+}
+.clock .box{
+	width: 16rem;
+	height: 16rem;
+	margin: 0 auto;
+	background-color: #343943;
+	border-radius: 50%;
+	position: relative;
+}
+
+/*12个小白点，时刻区*/
+.clock .point{
+	position: absolute;
+	top: 7.5rem;
+	left: 50%;
+	margin-left: -10rem;
+	width: 20rem;
+	height: 20rem;
+}
+.clock .point i{
+	display: block;
+	position: absolute;
+	width: 1rem;
+	height: 0.35rem;
+	border-radius: 15px;
+	background-color: #fff;
+}
+.clock .point i#twelve{
+	top: 0%;
+	left: 50%;
+	margin-left: -0.5rem;
+	transform: rotate(90deg);
+}
+.clock .point i#one{
+	top: 1.4rem;
+	right: 4.4rem;
+	transform: rotate(-60deg);
+	-webkit-animation: selfCircle_one 60s linear infinite;
+}
+@-webkit-keyframes selfCircle_one{
+	0%,7%{
+		-webkit-transform: rotate(-60deg);
+	}
+	8%,10%{
+		-webkit-transform: rotate(300deg);
+	}
+	11%,100%{
+		-webkit-transform: rotate(-60deg);
+	}
+}
+.clock .point i#two{
+	top: 5rem;
+	right: 1.2rem;
+	transform: rotate(-30deg);
+	-webkit-animation: selfCircle_two 60s linear infinite;
+}
+@-webkit-keyframes selfCircle_two{
+	0%,15%{
+		-webkit-transform: rotate(-30deg);
+	}
+	16%,18%{
+		-webkit-transform: rotate(330deg);
+	}
+	19%,100%{
+		-webkit-transform: rotate(-30deg);
+	}
+}
+.clock .point i#three{
+	top: 50%;
+	right: 0%;
+	margin-top: -0.175rem;
+	-webkit-animation: selfCircle_three 60s linear infinite;
+}
+@-webkit-keyframes selfCircle_three{
+	0%,23%{
+		-webkit-transform: rotate(0deg);
+	}
+	24%,26%{
+		-webkit-transform: rotate(360deg);
+	}
+	27%,100%{
+		-webkit-transform: rotate(0deg);
+	}
+}
+.clock .point i#four{
+	bottom: 5rem;
+	right: 1.2rem;
+	transform: rotate(30deg);
+	-webkit-animation: selfCircle_four 60s linear infinite;
+}
+@-webkit-keyframes selfCircle_four{
+	0%,32%{
+		-webkit-transform: rotate(30deg);
+	}
+	33%,35%{
+		-webkit-transform: rotate(390deg);
+	}
+	36%,100%{
+		-webkit-transform: rotate(30deg);
+	}
+}
+.clock .point i#five{
+	bottom: 1.4rem;
+	right: 4.4rem;
+	transform: rotate(60deg);
+	-webkit-animation: selfCircle_five 60s linear infinite;
+}
+@-webkit-keyframes selfCircle_five{
+	0%,40%{
+		-webkit-transform: rotate(60deg);
+	}
+	41%,43%{
+		-webkit-transform: rotate(420deg);
+	}
+	44%,100%{
+		-webkit-transform: rotate(60deg);
+	}
+}
+.clock .point i#six{
+	bottom: 0%;
+	left: 50%;
+	margin-left: -0.5rem;
+	transform: rotate(90deg);
+	-webkit-animation: selfCircle_six 60s linear infinite;
+}
+@-webkit-keyframes selfCircle_six{
+	0%,48%{
+		-webkit-transform: rotate(90deg);
+	}
+	49%,51%{
+		-webkit-transform: rotate(450deg);
+	}
+	52%,100%{
+		-webkit-transform: rotate(90deg);
+	}
+}
+.clock .point i#seven{
+	bottom: 1.4rem;
+	left: 4.4rem;
+	transform: rotate(120deg);
+	-webkit-animation: selfCircle_seven 60s linear infinite;
+}
+@-webkit-keyframes selfCircle_seven{
+	0%,57%{
+		-webkit-transform: rotate(120deg);
+	}
+	58%,60%{
+		-webkit-transform: rotate(480deg);
+	}
+	61%,100%{
+		-webkit-transform: rotate(120deg);
+	}
+}
+.clock .point i#eight{
+	bottom: 5rem;
+	left: 1.2rem;
+	transform: rotate(150deg);
+	-webkit-animation: selfCircle_eight 60s linear infinite;
+}
+@-webkit-keyframes selfCircle_eight{
+	0%,65%{
+		-webkit-transform: rotate(150deg);
+	}
+	66%,68%{
+		-webkit-transform: rotate(510deg);
+	}
+	69%,100%{
+		-webkit-transform: rotate(150deg);
+	}
+}
+.clock .point i#nine{
+	top: 50%;
+	left: 0%;
+	margin-top: -0.175rem;
+	-webkit-animation: selfCircle_night 60s linear infinite;
+}
+@-webkit-keyframes selfCircle_night{
+	0%,73%{
+		-webkit-transform: rotate(0deg);
+	}
+	74%,76%{
+		-webkit-transform: rotate(360deg);
+	}
+	77%,100%{
+		-webkit-transform: rotate(0deg);
+	}
+}
+.clock .point i#ten{
+	top: 5rem;
+	left: 1.2rem;
+	transform: rotate(-150deg);
+	-webkit-animation: selfCircle_ten 60s linear infinite;
+}
+@-webkit-keyframes selfCircle_ten{
+	0%,82%{
+		-webkit-transform: rotate(-150deg);
+	}
+	83%,85%{
+		-webkit-transform: rotate(210deg);
+	}
+	86%,100%{
+		-webkit-transform: rotate(-150deg);
+	}
+}
+.clock .point i#eleven{
+	top: 1.4rem;
+	left: 4.4rem;
+	transform: rotate(-120deg);
+	-webkit-animation: selfCircle_eleven 60s linear infinite;
+}
+@-webkit-keyframes selfCircle_eleven{
+	0%,90%{
+		-webkit-transform: rotate(-120deg);
+	}
+	91%,93%{
+		-webkit-transform: rotate(240deg);
+	}
+	94%,100%{
+		-webkit-transform: rotate(-120deg);
+	}
+}
+/*时刻区结束*/
+
+/*外部秒针区*/
+.clock .box .wrapper{
+	position: absolute;
+	top: 0rem;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+}
+.clock .box .wRight{
+	right: 0rem;
+}
+.clock .box .wLeft{
+	left: 0rem;
+}
+/*秒针的白色轨迹动画*/
+.clock .box .wrapper .circleProcess_out{
+	position: absolute;
+	top: 0rem;
+	width: 15.5rem;
+	height: 15.5rem;
+	border: 3px solid transparent;
+	border-radius: 50%;
+}
+.clock .box .wrapper .rCycle_out{
+	/*right: 0rem;*//*这里用rem单位在两个半圆border连接处会有1px的断层*/
+	right: 1px;
+	border-top: 3px solid #fff;
+	border-right: 3px solid #fff;
+	-webkit-animation: circleProgressLoad_right 60s linear infinite;
+}
+.clock .box .wrapper .lCycle_out{
+	/*left: 0rem;*//*这里用rem单位在两个半圆连接处会有1px的断层*/
+	left: 1px;
+	border-bottom: 3px solid #fff;
+	border-left: 3px solid #fff;
+	-webkit-animation: circleProgressLoad_left 60s linear infinite;
+}
+@-webkit-keyframes circleProgressLoad_right{
+	0%{
+		-webkit-transform: rotate(-135deg);
+	}
+	50%,100%{
+		-webkit-transform: rotate(45deg);
+	}
+}
+@-webkit-keyframes circleProgressLoad_left{
+	0%,50%{
+		-webkit-transform: rotate(-135deg);
+	}
+	100%{
+		-webkit-transform: rotate(45deg);
+	}
+}
+
+/*覆盖秒针轨迹的动画*/
+.clock .box .wrapper .circleProcessN{
+	position: absolute;
+	top: 0rem;
+	width: 15.4rem;
+	height: 15.4rem;
+	border: 3.6px solid transparent;
+	border-radius: 50%;
+}
+.clock .box .wrapper .rCycleN{
+	right: 1px;
+	border-top: 3.6px solid #343943;
+	border-right: 3.6px solid #343943;
+	-webkit-animation: circleProgressLoad_rightN 60s linear infinite;
+}
+.clock .box .wrapper .lCycleN{
+	left: 1px;
+	border-bottom: 3.6px solid #343943;
+	border-left: 3.6px solid #343943;
+	-webkit-animation: circleProgressLoad_leftN 60s linear infinite;
+}
+@-webkit-keyframes circleProgressLoad_rightN{
+	0%,99%{
+		-webkit-transform: rotate(-135deg);
+	}
+	100%{
+		-webkit-transform: rotate(45deg);
+	}
+}
+@-webkit-keyframes circleProgressLoad_leftN{
+	0%,99%{
+		-webkit-transform: rotate(-135deg);
+	}
+	100%{
+		-webkit-transform: rotate(45deg);
+	}
+}
+
+/*小球*/
+.clock .box .ball_out{
+	position: absolute;
+	top: -4.5%;
+	left: 46%;
+	width: 1.25rem;
+	height: 1.25rem;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	background-color: transparent;
+}
+/*静态小球*/
+.clock .box .ball-static{
+	background-color: #22252c;
+}
+/*动态小球，秒针*/
+.clock .box .outBall-move{
+	top: -3.35%;
+	left: 47.5%;
+	border: none;
+	background-color: #fff;
+	transform-origin: 35% 678%;
+	-webkit-animation: circleBall 60s linear infinite;
+}
+@-webkit-keyframes circleBall{
+	100%{
+		-webkit-transform: rotate(360deg);
+	}
+}
+/*时针区结束*/
+
+/*内部计划时间区*/
+.clock .box .circleProcess_in{
+	position: absolute;
+	top: 50%;
+	margin-top: -7rem;
+	width: 12rem;
+	height: 12rem;
+	border: 1rem solid transparent;
+	border-radius: 50%;
+	-webkit-transform: rotate(45deg);
+}
+.clock .box .rCycle_in{
+	right: 13px;
+	border-top: 1rem solid #40bb6b;
+	border-right: 1rem solid #40bb6b;
+	-webkit-animation: insideCircle_right 30s linear infinite;
+}
+.clock .box .lCycle_in{
+	left: 13px;
+	border-bottom: 1rem solid #40bb6b;
+	border-left: 1rem solid #40bb6b;
+	-webkit-animation: insideCircle_left 30s linear infinite;
+}
+@-webkit-keyframes insideCircle_right{
+	0%{
+		-webkit-transform: rotate(-135deg);
+	}
+	50%,100%{
+		-webkit-transform: rotate(45deg);
+	}
+}
+@-webkit-keyframes insideCircle_left{
+	0%,50%{
+		-webkit-transform: rotate(-135deg);
+	}
+	100%{
+		-webkit-transform: rotate(45deg);
+	}
+}
+.clock .box .ball_in{
+	position: absolute;
+	top: 6%;
+	left: 47%;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	background-color: #40bb6b;
+}
+.clock .box .inBall-move{
+	left: 47%;
+	transform-origin: 51% 696%;
+	-webkit-animation: circleBall_inner 30s linear infinite;
+}
+@-webkit-keyframes circleBall_inner{
+	100%{
+		-webkit-transform: rotate(360deg);
+	}
+}
+/*内部计划时间区结束*/
+
+/*正中时间显示区*/
+.clock .box .timeShow{
+	position: absolute;
+	top: 22%;
+	left: 22%;
+	width: 9rem;
+	height: 9rem;
+	color: #fff;
+	text-align: center;
+}
+.clock .box .timeShow p{
+	display: block;
+	width: 90%;
+	height: 5rem;
+	margin: 1.5rem auto 0.5rem;
+	line-height: 5rem;
+	font-size: 5rem;
+	
+}
+.clock .box .timeShow span{
+	display: block;
+	width: 50%;
+	height: 1.5rem;
+	margin: 0 auto;
+	line-height: 1.5rem;
+	font-size: 1.5rem;
+}
+/*时间显示区结束*/
+
+/*安排区*/
+.item{
+	width: 80%;
+	margin: 0 auto 3rem;
+}
+.item .plan{
+	width: 100%;
+	height: 4rem;
+	margin-bottom: 5px;
+	background-color: #31353e;
+	position: relative;
+}
+.item .hide{
+	display: none;
+}
+.item .plan .greenLine{
+	display: none;
+	position: absolute;
+	top: 15%;
+	left: -1.5%;
+	width: 0.4rem;
+	height: 2.8rem;
+	margin-left: 0.25rem;
+	background-color: #40bb6b;
+}
+.item .plan .lineShow{
+	display: block;
+}
+.item .plan .leftPart{
+	float: left;
+	width: 50%;
+	height: 80%;
+	margin-top: 0.4rem;
+	margin-left: 10%;
+	line-height: 1.6rem;
+	color: #fff;
+}
+.item .plan .leftPart span{
+	margin-right: 1rem;
+}
+.item .plan .rightPart{
+	float: right;
+	width: 30%;
+	height: 50%;
+	margin-top: 1rem;
+	margin-right: 10%;
+	line-height: 2rem;
+	text-align: right;
+	color: #fff;
+}
+.item .plan .rightPart span{
+	display: inline-block;
+	text-align: center;
+	font-size: 1rem;
+}
+.item .plan .rightPart span.lastTime{
+	width: 70%;
+	font-size: 3rem;
+}
+.item .plan .rightPart span.unit{
+	width: 30%;
+}
+/*安排区结束*/
+.showBtn{
+	width: 2.8rem;
+	height: 2.8rem;
+	margin: 2.5rem auto 0;
+}
+.showBtn span{
+	display: block;
+	width: 0.75rem;
+	height: 0.75rem;
+	margin: 0 auto 0.5rem;
+	border-radius: 50%;
+	background-color: #fff;
+}

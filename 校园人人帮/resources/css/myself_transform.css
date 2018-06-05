@@ -1,0 +1,179 @@
+*{
+	margin: 0 auto;
+	padding: 0;
+	font-family: "微软雅黑";
+	background-color: #f7f8fd;
+}
+html {font-size: 625%;/* 100 ÷ 16 × 100% = 625%*/}
+@media screen and (min-width:360px) and (max-width:374px) and (orientation:portrait) {
+    html { font-size: 703%; }
+}
+@media screen and (min-width:375px) and (max-width:383px) and (orientation:portrait) {
+    html { font-size: 732.4%; }
+}
+@media screen and (min-width:384px) and (max-width:399px) and (orientation:portrait) {
+    html { font-size: 750%; }
+}
+@media screen and (min-width:400px) and (max-width:413px) and (orientation:portrait) {
+    html { font-size: 781.25%; }
+}
+@media screen and (min-width:414px) and (max-width:431px) and (orientation:portrait){
+    html { font-size: 808.6%; }
+}
+@media screen and (min-width:432px) and (max-width:479px) and (orientation:portrait){
+    html { font-size: 843.75%; }
+}
+body{
+	position: relative;
+	height: 5.6919rem;
+}
+@font-face{
+	font-family: "dong";
+}
+a,a:link,a:visited,a:hover,a:active{
+	text-decoration:none;
+	color: #000;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);/*去掉点击时背景色改变的效果*/
+}
+div{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);/*去掉点击时背景色改变的效果*/
+}
+header{
+	height: 0.5121rem;
+	width: 100%;
+	background:#454253;
+	color: white;
+	position: relative;
+}
+header .head {
+	background: transparent;
+	padding-top: 0.0990rem;
+}
+header .head .arrow{
+	width: 0.1536rem;
+	height: 0.2219rem;
+	left: 0.1536rem;
+	bottom: 0.145071rem;
+	background: transparent;
+	position: absolute;
+}
+header .head h1{
+	text-align: center;
+	font-size:  0.1536rem;;
+	background: transparent;
+	clear: both;
+}
+header .head h2{
+	text-align: center;
+	font-size: 0.0854rem;
+	font-weight: normal;
+	background: transparent;
+	clear: both;
+}
+.flower{
+    width: 100%;
+}
+.act{
+	position: relative;
+	width: 86%;
+	text-align: center;
+	margin: 0 auto;
+	height: auto;
+	top: -0.7rem;
+}
+.one{
+	width: 100%;
+	text-align: center;
+	height: 0.9046rem;
+	box-shadow: 0 3px 4px #aaaaaa;
+	background: #ffffff;
+}
+.one img{
+	height: 0.7297rem;
+    width: 0.7297rem;
+    position: relative;
+	top: -0.7827rem;
+    border-radius: 0.7297rem;
+}
+.one h1{
+	margin-top: -0.8449rem;
+	text-align: center;
+    font-size: 0.1110rem;
+    background: transparent;
+    font-weight: 200;
+    color: #535353;
+    letter-spacing: 2px;
+}
+.one h2{
+	text-align: center;
+    font-size: 0.0939rem;
+    background: transparent;
+    font-weight: bold;
+    letter-spacing: 0.0043rem;
+}
+.two{
+	background: #ffffff;
+    height: 0.4182rem;
+    width: 100%;
+    border-style: none;
+    box-shadow: 0 0.0256rem 0.0342rem #aaaaaa;
+    margin-top: 0.192rem;
+}
+a{
+	background-color: #ffffff;
+}
+p,img{
+	background: transparent;
+}
+.two a{
+	display: block;
+    height: 0.290142rem;
+    width: 100%; 
+    text-decoration: none;
+    margin: 0 auto;
+    padding-top:0.128rem; 
+}
+.two a p{
+    font-size:0.128rem;
+    color: #535353;
+    float: left;
+    padding-left: 0.1707rem;
+}
+.two a img{
+	float: right;
+    height: 0.128rem;
+    width: 0.0683rem;
+    padding-right: 0.1707rem;
+}
+.three{
+	background: #ffffff;
+    height: auto;
+    width: 100%;
+    border-style: none;
+    box-shadow: 0 0.0256rem 0.0342rem #aaaaaa;
+    margin-top: 0.192rem;
+}
+.three a{
+	display: block;
+    height: 0.290142rem;
+    width: 100%; 
+    text-decoration: none;
+    margin: 0 auto;
+    padding-top:0.128rem; 
+}
+.three a p{
+    font-size:0.128rem;
+    color: #535353;
+    float: left;
+    padding-left: 0.1707rem;
+}
+.three hr{
+	width: 86%;
+	border:0.0001rem solid #bfbfbf;
+}
+.three a img{
+	float: right;
+    height: 0.128rem;
+    width: 0.0683rem;
+    padding-right: 0.1707rem;
+}
